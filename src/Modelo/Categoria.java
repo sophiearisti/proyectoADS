@@ -98,7 +98,7 @@ public class Categoria {
 		resultados.add(resultado);
 	}
 	
-	public boolean GuardarResultadoMedalla(Integer NoDeportista, String Medalla) 
+	/*public boolean GuardarResultadoMedalla(Integer NoDeportista, String Medalla) 
 	
 	{
 		
@@ -124,16 +124,6 @@ public class Categoria {
 		}
 		
 		return DeportistasGanadores;
-	}
-
-
-	
-
-
-	  
-	
-	
-	
-	
+	}*/
 
 }
