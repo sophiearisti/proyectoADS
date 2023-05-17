@@ -2,76 +2,125 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorMenuComitiva">
-   <children>
-      <Button layoutX="328.0" layoutY="198.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="255.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="326.0" layoutY="118.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="257.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="10.0" layoutY="276.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="263.0" style="-fx-background-color: transparent;" />
-      <Button fx:id="BInscribirDelegacion" layoutX="12.0" layoutY="198.0" mnemonicParsing="false" onAction="#InscribirDelegacion" prefHeight="64.0" prefWidth="263.0" style="-fx-background-color: transparent;" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#065180" height="93.0" layoutX="-15.0" layoutY="-8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="617.0" />
-      <ImageView fitHeight="93.0" fitWidth="100.0" layoutX="10.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Figuras/LOGOJAVERIANA.png" />
-         </image>
-      </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#09456c" height="43.0" layoutX="108.0" layoutY="41.0" stroke="TRANSPARENT" strokeType="INSIDE" width="494.0" />
-      <Button fx:id="BAtras" layoutX="111.0" layoutY="41.0" mnemonicParsing="false" onAction="#VolverAMenuPrincipal" prefHeight="41.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Atrás" textFill="WHITE" />
-      <Button fx:id="BinscribirDeportistas" layoutX="13.0" layoutY="118.0" mnemonicParsing="false" onAction="#InscribirDeportista" prefHeight="64.0" prefWidth="270.0" style="-fx-background-color: transparent;" />
-      <Label layoutX="122.0" layoutY="130.0" text="Inscribir deportistas">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="130.0" layoutY="208.0" text="Inscribir Delegación">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="425.0" layoutY="130.0" text="Desfile por Delegación">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="100.0" layoutY="288.0" prefHeight="16.0" prefWidth="165.0" text="Medalleria por disciplina">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="440.0" layoutY="203.0" prefHeight="43.0" prefWidth="149.0" text="Delegaciones con mayor puntuación" wrapText="true">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="68.0" fitWidth="100.0" layoutX="14.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Figuras/inscr.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="68.0" fitWidth="100.0" layoutX="14.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Figuras/inscr.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="71.0" fitWidth="59.0" layoutX="40.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Figuras/medalla.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="69.0" fitWidth="73.0" layoutX="340.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Figuras/desfile.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="97.0" fitWidth="75.0" layoutX="333.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Figuras/puntuacion.png" />
-         </image>
-      </ImageView>
-   </children>
-</AnchorPane>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorMenuComitiva">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="596.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#065180" height="93.0" layoutX="-15.0" layoutY="-8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="617.0" />
+            <ImageView fitHeight="93.0" fitWidth="100.0" layoutX="10.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/LOGOJAVERIANA.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#09456c" height="43.0" layoutX="108.0" layoutY="41.0" stroke="TRANSPARENT" strokeType="INSIDE" width="494.0" />
+            <Label layoutX="122.0" layoutY="130.0" text="Inscribir Delegación">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="116.0" layoutY="493.0" text="Desfile por Delegación">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="402.0" prefHeight="16.0" prefWidth="165.0" text="Medalleria por disciplina">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="382.0" prefHeight="43.0" prefWidth="149.0" text="Delegaciones con mayor puntuación" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="35.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/79-792657_create-a-playlist-create-icon-png-free-transparent.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="71.0" fitWidth="59.0" layoutX="39.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/medalla.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="73.0" layoutX="39.0" layoutY="475.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/desfile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="75.0" layoutX="316.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/puntuacion.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="124.0" layoutY="218.0" text="Eliminar Delegación">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="37.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/Unknown.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="128.0" layoutY="299.0" text="Editar Delegación">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="18.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/inscr.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="335.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/79-792657_create-a-playlist-create-icon-png-free-transparent.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="417.0" layoutY="131.0" text="Inscribir Deportista">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="336.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/Unknown.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="419.0" layoutY="220.0" text="Eliminar Deportista">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="313.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Figuras/inscr.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="434.0" layoutY="300.0" text="Editar Deportista">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="BAtras" layoutX="115.0" layoutY="47.0" mnemonicParsing="false" onAction="#VolverAMenuPrincipal" style="-fx-background-color: transparent;" text="Atrás" textFill="WHITE" />
+            <Button fx:id="BInscribirDelegacion" layoutX="26.0" layoutY="98.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="BinscribirDeportistas" layoutX="320.0" layoutY="100.0" mnemonicParsing="false" onAction="#InscribirDeportista" prefHeight="85.0" prefWidth="267.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="28.0" layoutY="190.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="266.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="321.0" layoutY="188.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="262.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="30.0" layoutY="263.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="252.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="318.0" layoutY="268.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="272.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="11.0" layoutY="365.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="272.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="307.0" layoutY="363.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="272.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="BInscribirDelegacion1" layoutX="26.0" layoutY="459.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="272.0" style="-fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
