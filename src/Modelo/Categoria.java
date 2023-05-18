@@ -15,7 +15,11 @@ public class Categoria {
 	
 	
 	//Constructores
-
+	
+	public Categoria() 
+	{
+		
+	}
 	
 	public Categoria(String nombre,Boolean individual,Boolean finalizado,ArrayList<Deportista> deportistas ,ArrayList<Resultado> resultados){
 		
@@ -102,7 +106,7 @@ public class Categoria {
 	
 	{
 		
-	}
+	
 	
 	public ArrayList<Deportista> BuscarGanadores(){
 		
@@ -116,7 +120,7 @@ public class Categoria {
 			{
 			
 				DeportistasGanadores.add(pivote);
-			}else if(pivote.getMedalla().equalsIgnoreCase("bronce") 
+			}else if(pivote.getMedalla().equalsIgnoreCase("bronce")) 
 				{
 					DeportistasGanadores.add(pivote);
 				}
@@ -124,6 +128,13 @@ public class Categoria {
 		}
 		
 		return DeportistasGanadores;
+	}
+	
 	}*/
+	
+	public ArrayList<Deportista> ObtenerDeportistas(){
+		
+		
+	}
 
 }
