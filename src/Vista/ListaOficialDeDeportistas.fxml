@@ -38,6 +38,6 @@
          </image>
       </ImageView>
       <ScrollBar layoutX="484.0" layoutY="155.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="16.0" />
-      <ComboBox layoutX="209.0" layoutY="130.0" prefWidth="150.0" />
+      <ComboBox layoutX="82.0" layoutY="111.0" prefWidth="150.0" promptText="Delegacion" />
    </children>
 </AnchorPane>
