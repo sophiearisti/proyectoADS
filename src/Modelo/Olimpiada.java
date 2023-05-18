@@ -36,6 +36,7 @@ public class Olimpiada
 		Jueces = jueces;
 	}
 	
+	
 	public Boolean AnadirDelegacion()
 	{
 		return true;
@@ -45,17 +46,32 @@ public class Olimpiada
 	{
 		return true;
 	}
-	
+	public ArrayList<Delegacion> ObtenerDelegacion()
+	{
+		ArrayList<Delegacion> k=new ArrayList<Delegacion>();
+		return k;
+	}
 	
 	
 	public Boolean AnadirDeportista()
 	{
+	
+		return true;
+	}
+	public Boolean EliminarDeportista()
+	{
+		return true;
+	}
+	public Boolean EditarDeportista()
+	{
 		return true;
 	}
 	
-	public Boolean BuscarDeportista()
+	
+	public static Deportista BuscarDeportista(Integer NoInscripcion)
 	{
-		return true;
+		Deportista m=new Deportista();
+		return m;
 	}
 	public Boolean BuscarDeportistaDeDelegacion()
 	{
@@ -64,6 +80,16 @@ public class Olimpiada
 	public Boolean BuscarDeportistaDeCategoria()
 	{
 		return true;
+	}
+	public ArrayList<Deportista> ObtenerDeportistasDeDelegacion()
+	{
+		ArrayList<Deportista> k=new ArrayList<Deportista>();
+		return k;
+	}
+	public ArrayList<Deportista> ObtenerDeportistasDeCategoria()
+	{
+		ArrayList<Deportista> k=new ArrayList<Deportista>();
+		return k;
 	}
 	
 	
@@ -77,16 +103,25 @@ public class Olimpiada
 	{
 		return true;
 	}
+	public ArrayList<Categoria> ObtenerCategoriasDeDisciplina(String nombreDisciplina)
+	{
+		ArrayList<Categoria> k=new ArrayList<Categoria>();
+		return k;
+	}
 	
 	
 	public Boolean AnadirDisciplina()
 	{
 		return true;
 	}
-	
 	public Boolean BuscarDisciplina()
 	{
 		return true;
+	}
+	public static ArrayList<Disciplina> ObtenerDisciplinas()
+	{
+		ArrayList<Disciplina> k=new ArrayList<Disciplina>();
+		return k;
 	}
 	
 	
