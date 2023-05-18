@@ -1,7 +1,14 @@
 package Modelo;
 
+import java.io.File;
+
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+
 public class Deportista {
 	
+	private static final JAXBContext JACBContext = null;
 	private Integer NoInscripcion;
 	private String Nombre;
 	private Boolean AsistenciaPrimeraVez;
@@ -22,6 +29,15 @@ public class Deportista {
 		this.DelegacionPertenece = delegacionPertenece;
 	}
 
+	public void marsharlToXML () throws JAXBException 
+	{
+		JAXBContext jaxbContext = JACBContext.newInstance(Deportista.class);
+		Marshaller marshaller = jaxbContext.createMarshaller();
+		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		marshaller.marshal(this, new File("Deportista.xml"));
+	}
+
+	
 	public Integer getNoInscripcion() {
 		return NoInscripcion;
 	}
@@ -81,3 +97,4 @@ public class Deportista {
 	
 
 }
+
