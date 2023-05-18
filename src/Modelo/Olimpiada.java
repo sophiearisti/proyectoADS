@@ -36,5 +36,58 @@ public class Olimpiada
 		Jueces = jueces;
 	}
 	
+	public Boolean AnadirDelegacion()
+	{
+		return true;
+	}
+	
+	public Boolean BuscarDelegacion()
+	{
+		return true;
+	}
+	
+	
+	
+	public Boolean AnadirDeportista()
+	{
+		return true;
+	}
+	
+	public Boolean BuscarDeportista()
+	{
+		return true;
+	}
+	public Boolean BuscarDeportistaDeDelegacion()
+	{
+		return true;
+	}
+	public Boolean BuscarDeportistaDeCategoria()
+	{
+		return true;
+	}
+	
+	
+	
+	public Boolean AnadirCategoria()
+	{
+		return true;
+	}
+	
+	public Boolean BuscarCategoria()
+	{
+		return true;
+	}
+	
+	
+	public Boolean AnadirDisciplina()
+	{
+		return true;
+	}
+	
+	public Boolean BuscarDisciplina()
+	{
+		return true;
+	}
+	
 	
 }

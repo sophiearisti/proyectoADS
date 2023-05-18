@@ -15,6 +15,9 @@ public class ControladorMenuOlimpiada {
 
     @FXML
     private Button BMenuComitiva;
+    
+    @FXML
+    private Button BJuez;
 
     @FXML
     private Button salir;
@@ -39,5 +42,22 @@ public class ControladorMenuOlimpiada {
     {
 
     }
+    
+    @FXML
+    void AbrirPantallaJuez(ActionEvent event) throws IOException 
+    {
+    	Stage stage;
+   	 	Scene scene;
+   	 	Parent root;
+   	 
+   	 
+   	 	root = FXMLLoader.load(getClass().getResource("/Vista/ListaDeDeportistasPorCompetencia.fxml"));
+	    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+
+    }
+
 
 }

@@ -27,9 +27,9 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <Text layoutX="76.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista oficial de deportistas" wrappingWidth="448.1611328125">
+      <Text layoutX="117.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista oficial de deportistas" wrappingWidth="366.1611328125">
          <font>
-            <Font size="38.0" />
+            <Font size="33.0" />
          </font>
       </Text>
       <ImageView fitHeight="72.0" fitWidth="100.0" layoutX="525.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
@@ -38,6 +38,6 @@
          </image>
       </ImageView>
       <ScrollBar layoutX="484.0" layoutY="155.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="16.0" />
-      <ComboBox layoutX="82.0" layoutY="111.0" prefWidth="150.0" promptText="Delegacion" />
+      <ComboBox layoutX="80.0" layoutY="115.0" prefWidth="150.0" promptText="Delegacion" style="-fx-background-color: #E7DECD;" />
    </children>
 </AnchorPane>
