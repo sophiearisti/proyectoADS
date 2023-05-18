@@ -8,10 +8,9 @@ public class Deportista {
 	private String Medalla;
 	private Boolean Abanderado;
 	private String DelegacionPertenece;
-	private Boolean Eliminado;
 	
 	public Deportista(Integer noInscripcion, String nombre, Boolean asistenciaPrimeraVez, Float estatura,
-			String medalla, Boolean abanderado, String delegacionPertenece, Boolean eliminado) {
+			String medalla, Boolean abanderado, String delegacionPertenece) {
 		super();
 		this.NoInscripcion = noInscripcion;
 		this.Nombre = nombre;
