@@ -1,6 +1,7 @@
 package Modelo;
 
 public class Deportista {
+	
 	private Integer NoInscripcion;
 	private String Nombre;
 	private Boolean AsistenciaPrimeraVez;
