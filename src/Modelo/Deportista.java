@@ -20,7 +20,6 @@ public class Deportista {
 		this.Medalla = medalla;
 		this.Abanderado = abanderado;
 		this.DelegacionPertenece = delegacionPertenece;
-		this.Eliminado = eliminado;
 	}
 
 	public Integer getNoInscripcion() {
@@ -79,14 +78,6 @@ public class Deportista {
 		DelegacionPertenece = delegacionPertenece;
 	}
 
-	public Boolean getEliminado() {
-		return Eliminado;
-	}
-
-	public void setEliminado(Boolean eliminado) {
-		Eliminado = eliminado;
-	}
-	
 	
 
 }
