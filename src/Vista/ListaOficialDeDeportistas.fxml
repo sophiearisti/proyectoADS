@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#065180" height="69.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="603.0" />
+      <TableView layoutX="83.0" layoutY="155.0" prefHeight="239.0" prefWidth="401.0" style="-fx-background-color: #065180;">
+        <columns>
+          <TableColumn prefWidth="128.7126922607422" text="No. Inscripción" />
+          <TableColumn minWidth="9.574539184570312" prefWidth="107.36186218261719" text="Nombre" />
+            <TableColumn prefWidth="162.42544555664062" text="Facultad" />
+        </columns>
+      </TableView>
+      <Button fx:id="BAtras" layoutY="1.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="82.0" style="-fx-background-color: #09456c;" text="Menú" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Text layoutX="76.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista oficial de deportistas" wrappingWidth="448.1611328125">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="72.0" fitWidth="100.0" layoutX="525.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Figuras/LOGOJAVERIANA.png" />
+         </image>
+      </ImageView>
+      <ScrollBar layoutX="484.0" layoutY="155.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="16.0" />
+      <ComboBox layoutX="208.0" layoutY="117.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
