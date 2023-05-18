@@ -11,6 +11,10 @@ public class Juez {
 		this.Codigo = codigo;
 		this.ColegioArbitral = colegioArbitral;
 	}
+	
+	public Juez() {
+	
+	}
 
 	public String getNombre() {
 		return Nombre;

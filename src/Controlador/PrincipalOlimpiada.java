@@ -31,6 +31,6 @@ public class PrincipalOlimpiada extends Application {
 		launch(args);
 		Deportista d= new Deportista(4, "ss", true, 123f,
 			"maa", false, "cnn");
-		d.marsharlToXML();
+
 	}
 }	

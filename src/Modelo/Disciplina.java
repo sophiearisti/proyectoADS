@@ -7,6 +7,11 @@ public class Disciplina
 	private ArrayList<Categoria> Categorias;
 	
 	private String Disciplina;
+	
+	public Disciplina() 
+	{
+		
+	}
 
 	public Disciplina(String disciplina) 
 	{

@@ -28,13 +28,9 @@ public class Deportista {
 		this.Abanderado = abanderado;
 		this.DelegacionPertenece = delegacionPertenece;
 	}
-
-	public void marsharlToXML () throws JAXBException 
-	{
-		JAXBContext jaxbContext = JACBContext.newInstance(Deportista.class);
-		Marshaller marshaller = jaxbContext.createMarshaller();
-		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		marshaller.marshal(this, new File("Deportista.xml"));
+	
+	public Deportista() {
+		
 	}
 
 	

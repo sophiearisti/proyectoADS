@@ -17,7 +17,13 @@ public class Resultado {
 		this.CodigoPlata = codigoPlata;
 		this.CodigoBronce = codigoBronce;
 	}
+	
+	public Resultado() 
+	{
+	
+	}
 
+	
 	public Categoria getCategoria() {
 		return Categoria;
 	}

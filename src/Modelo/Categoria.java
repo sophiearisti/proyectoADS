@@ -133,7 +133,7 @@ public class Categoria {
 	}*/
 	
 	public ArrayList<Deportista> ObtenerDeportistas(){
-		
+		return this.Deportistas;
 		
 	}
 

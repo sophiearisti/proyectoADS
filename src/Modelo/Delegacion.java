@@ -19,6 +19,10 @@ public class Delegacion
 		Puntuacion = 0;
 	}
 	
+	public Delegacion() {
+		
+	}
+	
 	
 	public Delegacion(String facultad, String representante, Integer numeroParticipantes, Integer puntuacion,
 			ArrayList<Deportista> deportistas) {
