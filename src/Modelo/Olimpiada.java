@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Olimpiada 
 {
-	private ArrayList<Delegacion> Delegaciones;
-	private ArrayList<Disciplina> Disciplinas;
-	private ArrayList<Juez> Jueces;
-	
+	private static ArrayList<Delegacion> Delegaciones;
+	private static ArrayList<Disciplina> Disciplinas;
+	private static ArrayList<Juez> Jueces;
+	private static ArrayList<Deportista> Deportistas;
 	
 	
 	public Olimpiada(ArrayList<Delegacion> delegaciones, ArrayList<Disciplina> disciplinas, ArrayList<Juez> jueces) 
@@ -17,19 +17,19 @@ public class Olimpiada
 		Jueces = jueces;
 	}
 	
-	public ArrayList<Delegacion> getDelegaciones() {
+	public static ArrayList<Delegacion> getDelegaciones() {
 		return Delegaciones;
 	}
-	public void setDelegaciones(ArrayList<Delegacion> delegaciones) {
+	public static void setDelegaciones(ArrayList<Delegacion> delegaciones) {
 		Delegaciones = delegaciones;
 	}
-	public ArrayList<Disciplina> getDisciplinas() {
+	public static ArrayList<Disciplina> getDisciplinas() {
 		return Disciplinas;
 	}
-	public void setDisciplinas(ArrayList<Disciplina> disciplinas) {
+	public static void setDisciplinas(ArrayList<Disciplina> disciplinas) {
 		Disciplinas = disciplinas;
 	}
-	public ArrayList<Juez> getJueces() {
+	public static ArrayList<Juez> getJueces() {
 		return Jueces;
 	}
 	public void setJueces(ArrayList<Juez> jueces) {
@@ -37,32 +37,32 @@ public class Olimpiada
 	}
 	
 	
-	public Boolean AnadirDelegacion()
+	public static Boolean AnadirDelegacion()
 	{
 		return true;
 	}
 	
-	public Boolean BuscarDelegacion()
+	public static Boolean BuscarDelegacion()
 	{
 		return true;
 	}
-	public ArrayList<Delegacion> ObtenerDelegacion()
+	public static ArrayList<Delegacion> ObtenerDelegacion()
 	{
 		ArrayList<Delegacion> k=new ArrayList<Delegacion>();
 		return k;
 	}
 	
 	
-	public Boolean AnadirDeportista()
+	public static Boolean AnadirDeportista()
 	{
 	
 		return true;
 	}
-	public Boolean EliminarDeportista()
+	public static Boolean EliminarDeportista()
 	{
 		return true;
 	}
-	public Boolean EditarDeportista()
+	public static Boolean EditarDeportista()
 	{
 		return true;
 	}
@@ -73,20 +73,20 @@ public class Olimpiada
 		Deportista m=new Deportista();
 		return m;
 	}
-	public Boolean BuscarDeportistaDeDelegacion()
+	public static Boolean BuscarDeportistaDeDelegacion()
 	{
 		return true;
 	}
-	public Boolean BuscarDeportistaDeCategoria()
+	public static Boolean BuscarDeportistaDeCategoria()
 	{
 		return true;
 	}
-	public ArrayList<Deportista> ObtenerDeportistasDeDelegacion()
+	public static ArrayList<Deportista> ObtenerDeportistasDeDelegacion()
 	{
 		ArrayList<Deportista> k=new ArrayList<Deportista>();
 		return k;
 	}
-	public ArrayList<Deportista> ObtenerDeportistasDeCategoria()
+	public static ArrayList<Deportista> ObtenerDeportistasDeCategoria()
 	{
 		ArrayList<Deportista> k=new ArrayList<Deportista>();
 		return k;
@@ -94,27 +94,27 @@ public class Olimpiada
 	
 	
 	
-	public Boolean AnadirCategoria()
+	public static Boolean AnadirCategoria()
 	{
 		return true;
 	}
 	
-	public Boolean BuscarCategoria()
+	public static Boolean BuscarCategoria()
 	{
 		return true;
 	}
-	public ArrayList<Categoria> ObtenerCategoriasDeDisciplina(String nombreDisciplina)
+	public static ArrayList<Categoria> ObtenerCategoriasDeDisciplina(String nombreDisciplina)
 	{
 		ArrayList<Categoria> k=new ArrayList<Categoria>();
 		return k;
 	}
 	
 	
-	public Boolean AnadirDisciplina()
+	public static Boolean AnadirDisciplina()
 	{
 		return true;
 	}
-	public Boolean BuscarDisciplina()
+	public static Boolean BuscarDisciplina()
 	{
 		return true;
 	}
