@@ -21,35 +21,37 @@ public class Olimpiada
 		
 		ArrayList<Delegacion> prueba=new ArrayList<Delegacion> ();
 		ArrayList<Deportista> Dep=new ArrayList<> ();
-		
+		ArrayList<Deportista> Dep1=new ArrayList<> ();
+		ArrayList<Deportista> Dep2=new ArrayList<> ();
+		ArrayList<Deportista> Dep3=new ArrayList<> ();
 		//////////delegacion 1//////////
-		Dep.add(new Deportista(1,"Juan Paez",false,123f,false,"Ingenieria"));
-		Dep.add(new Deportista(2,"Laura Pinto",true,123f,false,"Ingenieria"));
-		Dep.add(new Deportista(1,"Mariana Duque",true,123f,true,"Ingenieria"));
-		Dep.add(new Deportista(1,"Fernando Far",true,123f,false,"Ingenieria"));
-		Dep.add(new Deportista(1,"Samuel Guitierrez",false,123f,false,"Ingenieria"));
+		Dep3.add(new Deportista(1,"Juan Paez",false,123f,false,"Ingenieria"));
+		Dep3.add(new Deportista(2,"Laura Pinto",true,123f,false,"Ingenieria"));
+		Dep3.add(new Deportista(1,"Mariana Duque",true,123f,true,"Ingenieria"));
+		Dep3.add(new Deportista(1,"Fernando Far",true,123f,false,"Ingenieria"));
+		Dep3.add(new Deportista(1,"Samuel Guitierrez",false,123f,false,"Ingenieria"));
 		
-		prueba.add(new Delegacion("Ingenieria","Pablo Suarez",Dep.size(),Dep));
+		prueba.add(new Delegacion("Ingenieria","Pablo Suarez",Dep3.size(),Dep3));
 		
 		/////////Delegacion 2/////////
 		Dep.clear();
-		Dep.add(new Deportista(1,"Santiago Castro",false,123f,false,"Medicina"));
-		Dep.add(new Deportista(2,"Pablo Suarez",true,123f,false,"Medicina"));
-		Dep.add(new Deportista(1,"Melany Rizo",true,123f,true,"Medicina"));
-		Dep.add(new Deportista(1,"Fernando Aristizabal",true,123f,false,"Medicina"));
-		Dep.add(new Deportista(1,"Samuel Paez",false,123f,false,"Medicina"));
+		Dep1.add(new Deportista(1,"Santiago Castro",false,123f,false,"Medicina"));
+		Dep1.add(new Deportista(2,"Pablo Suarez",true,123f,false,"Medicina"));
+		Dep1.add(new Deportista(1,"Melany Rizo",true,123f,true,"Medicina"));
+		Dep1.add(new Deportista(1,"Fernando Aristizabal",true,123f,false,"Medicina"));
+		Dep1.add(new Deportista(1,"Samuel Paez",false,123f,false,"Medicina"));
 		
-		prueba.add(new Delegacion("Medicina","Pablo Suarez",Dep.size(),Dep));
+		prueba.add(new Delegacion("Medicina","Pablo Suarez",Dep1.size(),Dep1));
 		
 		
 		////////Delegacion 3/////////
 		Dep.clear();
-		Dep.add(new Deportista(1,"Pedro Piedra",false,123f,false,"CEA"));
-		Dep.add(new Deportista(2,"Salomon Garcia",true,123f,false,"CEA"));
-		Dep.add(new Deportista(1,"Melany PAPA",true,123f,true,"CEA"));
-		Dep.add(new Deportista(1,"Sophie fifi",true,123f,false,"CEA"));
+		Dep2.add(new Deportista(1,"Pedro Piedra",false,123f,false,"CEA"));
+		Dep2.add(new Deportista(2,"Salomon Garcia",true,123f,false,"CEA"));
+		Dep2.add(new Deportista(1,"Melany PAPA",true,123f,true,"CEA"));
+		Dep2.add(new Deportista(1,"Sophie fifi",true,123f,false,"CEA"));
 		
-		prueba.add(new Delegacion("CEA","Pablo Suarez",Dep.size(),Dep));
+		prueba.add(new Delegacion("CEA","Pablo Suarez",Dep2.size(),Dep2));
 		
 		
 		return prueba;

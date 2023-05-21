@@ -71,18 +71,21 @@ public class ControladorDesfilePorDelegacion implements Initializable
     @FXML
     void DelegacionAnterior(ActionEvent event) 
     {
-    	Integer ver=Iterador;
-    	if(ver-1<0)
+    	this.Iterador--;
+    	if(Iterador<0)
     	{
-    		
+    		this.Iterador++;
     	}
     	else
     	{
-    		NombreDelegacion.setText(NombresOrdenados.get(Iterador--));
+	    	
+    	    String nombre=NombresOrdenados.get(this.Iterador);
+    		NombreDelegacion.setText(nombre);
+    		
+        	ArrayList<Deportista> DeportistasOrdenados=ordenarDeportistas(this.delegacionesMap.get(nombre));
+        	System.out.println(nombre);
         	
-        	//ArrayList<Deportista> DeportistasOrdenados=ordenarDeportistas(delegacionesMap.get(NombresOrdenados.get(Iterador)));
-        	
-        	//LlenarTabla(DeportistasOrdenados);
+        	LlenarTabla(DeportistasOrdenados);
     	}
     }
 
@@ -90,19 +93,21 @@ public class ControladorDesfilePorDelegacion implements Initializable
     @FXML
     void DlegacionSiguiente(ActionEvent event) 
     {
-    	Integer ver=Iterador;
-    	if(ver+1>Maximo)
+    	this.Iterador++;
+    	if(this.Iterador>Maximo)
     	{
-    		
+    	  this.Iterador--;
     	}
     	else
     	{
+    	
+    	    String nombre=NombresOrdenados.get(this.Iterador);
+    		NombreDelegacion.setText(nombre);
     		
-    		NombreDelegacion.setText(NombresOrdenados.get(Iterador++));
+        	ArrayList<Deportista> DeportistasOrdenados=ordenarDeportistas(this.delegacionesMap.get(nombre));
+        	System.out.println(nombre);
         	
-        	//ArrayList<Deportista> DeportistasOrdenados=ordenarDeportistas(delegacionesMap.get(NombresOrdenados.get(Iterador)));
-        	
-        	//LlenarTabla(DeportistasOrdenados);
+        	LlenarTabla(DeportistasOrdenados);
     	}
     }
     
@@ -113,16 +118,23 @@ public class ControladorDesfilePorDelegacion implements Initializable
     	
     	ArrayList<Delegacion> delegaciones=Olimpiada.getDelegaciones();
     	
-    	Maximo=delegaciones.size();
+    	Maximo=delegaciones.size()-1;
     	
     	for (Delegacion del : delegaciones) 
     	{
 
             delegacionesMap.put(del.getFacultad(),del.getDeportistas());
+          
+            for(Deportista dep:del.getDeportistas())
+        	{
+        		System.out.println(dep.getNombre());
+        		System.out.println(dep.getDelegacionPertenece());
+        	}
         }
     	
-    	NombresOrdenados = new ArrayList<>(delegacionesMap.keySet());
+    	NombresOrdenados = new ArrayList<String>(delegacionesMap.keySet());
     	
+    
     	NombreDelegacion.setText(NombresOrdenados.get(Iterador));
     	
     	ArrayList<Deportista> DeportistasOrdenados=ordenarDeportistas(delegacionesMap.get(NombresOrdenados.get(Iterador)));
