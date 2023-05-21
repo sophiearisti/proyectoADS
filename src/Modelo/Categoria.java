@@ -21,13 +21,27 @@ public class Categoria {
 		
 	}
 	
-	public Categoria(String nombre,Boolean individual,Boolean finalizado,ArrayList<Deportista> deportistas ,ArrayList<Resultado> resultados){
+	public Categoria(String nombre,Boolean individual,Boolean finalizado,ArrayList<Deportista> deportistas) //ArrayList<Resultado> resultados)
+	{
 		
 		this.Nombre= nombre;
 		this.Individual = individual;
 		this.Finalizado = finalizado;
 		this.Deportistas = deportistas;
-		this.resultados = resultados;
+		//this.resultados = resultados;
+	}
+	
+	public String buscarCategoriaDeportista(Integer NoInscripcion) 
+	{
+		for(Deportista dep: Deportistas)
+		{
+			if(dep.getNoInscripcion()==NoInscripcion)
+			{
+				return dep.getNombre();
+			}
+		}
+		
+		return "";
 	}
 
 	//Getters y setters
@@ -134,6 +148,26 @@ public class Categoria {
 	
 	public ArrayList<Deportista> ObtenerDeportistas(){
 		return this.Deportistas;
+		
+	}
+	
+	public void ActualizarDeportistas(Integer id,String nombre, Boolean asistenciaPrimeraVez, Float estatura,
+			Boolean abanderado)
+	{
+		
+		for(Deportista dep: Deportistas)
+		{
+			
+			if(id==dep.getNoInscripcion())
+			{
+				dep.setNombre(nombre);
+				dep.setAsistenciaPrimeraVez(asistenciaPrimeraVez);
+				dep.setAbanderado(abanderado);
+				dep.setEstatura(estatura);
+			}
+			
+		}
+		
 		
 	}
 

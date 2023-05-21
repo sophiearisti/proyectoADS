@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="655.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorEditarDeportista">
    <children>
@@ -34,14 +35,14 @@
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <Button disable="true" layoutX="276.0" layoutY="375.0" mnemonicParsing="false" onAction="#EditarDeportista" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Guardar">
+      <Button fx:id="Bguardar" disable="true" layoutX="276.0" layoutY="375.0" mnemonicParsing="false" onAction="#EditarDeportista" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Guardar">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
       <TextField fx:id="TNombre" disable="true" layoutX="130.0" layoutY="326.0" promptText="Nombre" />
       <TextField fx:id="TEstatura" disable="true" layoutX="375.0" layoutY="324.0" promptText="Estatura" />
-      <Label fx:id="labelCategoria" layoutX="293.0" layoutY="151.0" prefHeight="17.0" prefWidth="97.0" text="Delegación">
+      <Label fx:id="labelCategoria" layoutX="286.0" layoutY="151.0" prefHeight="18.0" prefWidth="74.0" text="Delegación">
          <font>
             <Font size="14.0" />
          </font>
@@ -51,7 +52,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelCategoria" layoutX="494.0" layoutY="152.0" prefHeight="17.0" prefWidth="97.0" text="Categoría">
+      <Label fx:id="labelCategoria" layoutX="481.0" layoutY="152.0" prefHeight="17.0" prefWidth="97.0" text="Categoría">
          <font>
             <Font size="14.0" />
          </font>
@@ -85,5 +86,12 @@
             <Image url="@Figuras/LOGOJAVERIANA.png" />
          </image>
       </ImageView>
+      <Button fx:id="notificacionVentana" layoutX="199.0" layoutY="138.0" mnemonicParsing="false" prefHeight="203.0" prefWidth="298.0" style="-fx-background-color: #E3DE8F;" visible="false" />
+      <Button fx:id="BotonNotificacion" layoutX="321.0" layoutY="299.0" mnemonicParsing="false" onAction="#AceptarNotificacion" style="-fx-background-color: #D4B483;" text="Aceptar" visible="false" />
+      <Text fx:id="TextNotificacion" layoutX="252.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El codigo de ese deportista no existe" visible="false" wrappingWidth="210.662109375">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

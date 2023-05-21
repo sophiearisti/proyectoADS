@@ -99,5 +99,21 @@ public class Delegacion
 		return insertado;
 	}
 	
+	public void ActualizarDeportista(Integer id,String nombre, Boolean asistenciaPrimeraVez, Float estatura,
+			Boolean abanderado)
+	{
+		for(Deportista dep: Deportistas)
+		{
+			if(id==dep.getNoInscripcion())
+			{
+				dep.setNombre(nombre);
+				dep.setAsistenciaPrimeraVez(asistenciaPrimeraVez);
+				dep.setAbanderado(abanderado);
+				dep.setEstatura(estatura);
+			}
+			
+		}
+	}
+	
 	
 }

@@ -7,8 +7,7 @@ import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 
 public class Deportista {
-	
-	private static final JAXBContext JACBContext = null;
+
 	private Integer NoInscripcion;
 	private String Nombre;
 	private Boolean AsistenciaPrimeraVez;
@@ -16,19 +15,46 @@ public class Deportista {
 	private String Medalla;
 	private Boolean Abanderado;
 	private String DelegacionPertenece;
+	private String CategoriaPertenece;
+	private String DisciplinaPertenece;
+	
+	
 	
 	public Deportista(Integer noInscripcion, String nombre, Boolean asistenciaPrimeraVez, Float estatura,
-			Boolean abanderado, String delegacionPertenece) {
+			Boolean abanderado, String delegacionPertenece, String categoriaPertenece,String disciplinaPertenece) {
 		super();
-		this.NoInscripcion = noInscripcion;
-		this.Nombre = nombre;
-		this.AsistenciaPrimeraVez = asistenciaPrimeraVez;
-		this.Estatura = estatura;
+		NoInscripcion = noInscripcion;
+		Nombre = nombre;
+		AsistenciaPrimeraVez = asistenciaPrimeraVez;
+		Estatura = estatura;
+		Abanderado = abanderado;
 		this.Medalla = "ninguna";
-		this.Abanderado = abanderado;
-		this.DelegacionPertenece = delegacionPertenece;
+		DelegacionPertenece = delegacionPertenece;
+		CategoriaPertenece = categoriaPertenece;
+		DisciplinaPertenece = disciplinaPertenece;
 	}
-	
+
+
+	public String getCategoriaPertenece() {
+		return CategoriaPertenece;
+	}
+
+
+	public void setCategoriaPertenece(String categoriaPertenece) {
+		CategoriaPertenece = categoriaPertenece;
+	}
+
+
+	public String getDisciplinaPertenece() {
+		return DisciplinaPertenece;
+	}
+
+
+	public void setDisciplinaPertenece(String disciplinaPertenece) {
+		DisciplinaPertenece = disciplinaPertenece;
+	}
+
+
 	public Deportista() {
 		
 	}

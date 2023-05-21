@@ -12,10 +12,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class ControladorEditarDeportista 
@@ -56,7 +58,19 @@ public class ControladorEditarDeportista
 
     @FXML
     private Label labelDisciplina;
-	
+    
+    @FXML
+    private Button Bguardar;
+    
+    @FXML
+    private Button BotonNotificacion;
+    
+    @FXML
+    private Text TextNotificacion;
+    
+    @FXML
+    private Button notificacionVentana;
+    
 	@FXML
     void VolverAMenuComitiva(ActionEvent event) throws IOException 
     {
@@ -81,7 +95,7 @@ public class ControladorEditarDeportista
 		
 		if(dep!=null)
 		{
-			CBDelegacion.setDisable(false);
+			Bguardar.setDisable(false);
 			RBNoAsistencia.setDisable(false);
 			RBSiAsistencia.setDisable(false);
 			RBNoAbanderado.setDisable(false);
@@ -89,9 +103,10 @@ public class ControladorEditarDeportista
 			TEstatura.setDisable(false);
 			TNombre.setDisable(false);
 			
-			
 			//anadir info del deportista
 			CBDelegacion.setPromptText(dep.getDelegacionPertenece());
+			CBDisciplina.setPromptText(dep.getDisciplinaPertenece());
+			CBCategoria.setPromptText(dep.getCategoriaPertenece());
 			
 			
 			if(dep.getAsistenciaPrimeraVez())
@@ -121,17 +136,67 @@ public class ControladorEditarDeportista
 			
 			TNombre.setText(dep.getNombre());
 			
+			//buscar su disciplina y categoria
+			
+			
 		}
 		else
 		{	
-			CBDelegacion.setDisable(true);
 			RBNoAsistencia.setDisable(true);
 			RBSiAsistencia.setDisable(true);
 			RBNoAbanderado.setDisable(true);
 			RBSiAbanderado.setDisable(true);
 			TEstatura.setDisable(true);
 			TNombre.setDisable(true);
+			Bguardar.setDisable(true);
+			TNombre.setText(null);
+			TEstatura.setText(null);
+			RBNoAbanderado.setSelected(false);
+			RBSiAbanderado.setSelected(false);
+			RBNoAsistencia.setSelected(false);
+			RBSiAsistencia.setSelected(false);
+			CBDisciplina.setPromptText(null);
+			CBDelegacion.setPromptText(null);
+			CBCategoria.setPromptText(null);
+			
+			BotonNotificacion.setVisible(true);
+			TextNotificacion.setVisible(true);
+			notificacionVentana.setVisible(true);
+			
 		}
 		
     }
+	
+	@FXML
+    void AceptarNotificacion(ActionEvent event)
+	{
+		BotonNotificacion.setVisible(false);
+		TextNotificacion.setVisible(false);
+		notificacionVentana.setVisible(false);
+    }
+	
+	@FXML
+    void EditarDeportista(ActionEvent event) 
+	{
+		Boolean EsAbanderado=false,EsPrimerVez=false;
+		
+		if(RBSiAbanderado.isSelected()==true)
+		{
+			EsAbanderado=true;
+		}
+		
+		if(RBSiAsistencia.isSelected()==true)
+		{
+			EsPrimerVez=true;
+		}
+		
+		Olimpiada.EditarDeportista(Integer.parseInt(TextBuscador.getText()),TNombre.getText(),EsPrimerVez,Float.parseFloat(TEstatura.getText()),EsAbanderado,CBDelegacion.getPromptText(),CBCategoria.getPromptText(),CBDisciplina.getPromptText());
+		//se guarda todo
+		//Deportista Editado=new Deportista();
+		//actualizarlo de la delegacion y de la categoria a la que pertenece
+		
+		
+	}
+	
+	
 }

@@ -17,7 +17,40 @@ public class Disciplina
 	{
 		Disciplina = disciplina;
 	}
+	
 
+	public Disciplina(ArrayList<Categoria> categorias, String disciplina) {
+		super();
+		Categorias = categorias;
+		Disciplina = disciplina;
+	}
+
+	public void actualizarDeportista(Integer id,String nombre, Boolean asistenciaPrimeraVez, Float estatura,
+			Boolean abanderado,String categoriaPertenece)
+	{
+		for(Categoria cat: Categorias)
+		{
+			if(cat.getNombre().equals(categoriaPertenece))
+			{
+				cat.ActualizarDeportistas(id, nombre, asistenciaPrimeraVez, estatura, abanderado);
+			}
+		}
+	}
+	
+	public Boolean buscarCategoria(String categoria) 
+	{
+		for(Categoria cat: Categorias)
+		{
+			if(cat.getNombre()==categoria)
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	
 	public String getDisciplina() {
 		return Disciplina;
 	}

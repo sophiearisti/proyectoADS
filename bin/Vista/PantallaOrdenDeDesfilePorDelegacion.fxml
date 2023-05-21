@@ -37,6 +37,5 @@
             <Image url="@Figuras/LOGOJAVERIANA.png" />
          </image>
       </ImageView>
-      <Button layoutX="27.0" layoutY="283.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>
