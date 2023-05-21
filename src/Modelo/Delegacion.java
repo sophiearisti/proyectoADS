@@ -19,7 +19,8 @@ public class Delegacion
 		Puntuacion = 0;
 	}
 	
-	public Delegacion() {
+	public Delegacion() 
+	{
 		
 	}
 	

@@ -191,9 +191,6 @@ public class ControladorEditarDeportista
 		}
 		
 		Olimpiada.EditarDeportista(Integer.parseInt(TextBuscador.getText()),TNombre.getText(),EsPrimerVez,Float.parseFloat(TEstatura.getText()),EsAbanderado,CBDelegacion.getPromptText(),CBCategoria.getPromptText(),CBDisciplina.getPromptText());
-		//se guarda todo
-		//Deportista Editado=new Deportista();
-		//actualizarlo de la delegacion y de la categoria a la que pertenece
 		
 		
 	}
