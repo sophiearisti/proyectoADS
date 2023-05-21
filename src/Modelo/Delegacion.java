@@ -24,13 +24,13 @@ public class Delegacion
 	}
 	
 	
-	public Delegacion(String facultad, String representante, Integer numeroParticipantes, Integer puntuacion,
+	public Delegacion(String facultad, String representante, Integer numeroParticipantes,
 			ArrayList<Deportista> deportistas) {
 		super();
 		Facultad = facultad;
 		Representante = representante;
 		NumeroParticipantes = numeroParticipantes;
-		Puntuacion = puntuacion;
+		Puntuacion = 0;
 		Deportistas = deportistas;
 	}
 

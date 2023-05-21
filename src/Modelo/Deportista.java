@@ -18,13 +18,13 @@ public class Deportista {
 	private String DelegacionPertenece;
 	
 	public Deportista(Integer noInscripcion, String nombre, Boolean asistenciaPrimeraVez, Float estatura,
-			String medalla, Boolean abanderado, String delegacionPertenece) {
+			Boolean abanderado, String delegacionPertenece) {
 		super();
 		this.NoInscripcion = noInscripcion;
 		this.Nombre = nombre;
 		this.AsistenciaPrimeraVez = asistenciaPrimeraVez;
 		this.Estatura = estatura;
-		this.Medalla = medalla;
+		this.Medalla = "ninguna";
 		this.Abanderado = abanderado;
 		this.DelegacionPertenece = delegacionPertenece;
 	}

@@ -29,8 +29,6 @@ public class PrincipalOlimpiada extends Application {
 	public static void main(String[] args) throws JAXBException 
 	{
 		launch(args);
-		Deportista d= new Deportista(4, "ss", true, 123f,
-			"maa", false, "cnn");
 
 	}
 }	

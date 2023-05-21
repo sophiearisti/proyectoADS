@@ -12,6 +12,30 @@ public class FilaTablaDesfile
 		TipoEstudiante = tipoEstudiante;
 		Nombre = nombre;
 	}
+
+	public Integer getIDEstudiante() {
+		return IDEstudiante;
+	}
+
+	public void setIDEstudiante(Integer iDEstudiante) {
+		IDEstudiante = iDEstudiante;
+	}
+
+	public String getTipoEstudiante() {
+		return TipoEstudiante;
+	}
+
+	public void setTipoEstudiante(String tipoEstudiante) {
+		TipoEstudiante = tipoEstudiante;
+	}
+
+	public String getNombre() {
+		return Nombre;
+	}
+
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
 	
 	
 	
