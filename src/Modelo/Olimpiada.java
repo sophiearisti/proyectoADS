@@ -23,6 +23,22 @@ public class Olimpiada
 		return disciplinasList.getDisciplinasList(); 
 		
 	}
+	public static ArrayList<String> getDisciplinasCategorias() 
+	
+	{
+		
+		ArrayList<String> NombreCategoria = new ArrayList<String>();
+		
+		
+		for(Disciplina indice : disciplinasList.getDisciplinasList()) {
+			
+			NombreCategoria.add(indice.getDisciplina());
+		}
+		
+		return NombreCategoria; 
+				
+	
+	}
 	
 	public static void setDisciplinas(ArrayList<Disciplina> disciplinas) {
 		disciplinasList.setDisciplinasList(disciplinas);
@@ -99,9 +115,12 @@ public class Olimpiada
 		return encontrado;
 	}
 	
-	public static Boolean BuscarDeportistaDeDelegacion()
+	public static Boolean BuscarDeportistaDeDelegacion(Integer codigo)
 	{
-		return true;
+		boolean registro = false;
+		registro = ListaDeportistas.deportista_registrado(codigo);
+		
+		return registro;
 	}
 	
 	public static Boolean BuscarDeportistaDeCategoria()
