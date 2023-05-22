@@ -1,9 +1,9 @@
 package Controlador;
 
 import Modelo.Deportista;
-import jakarta.xml.bind.JAXBException;
+//import jakarta.xml.bind.JAXBException;
 
-//
+
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +26,7 @@ public class PrincipalOlimpiada extends Application {
 		}
 	}
 	
-	public static void main(String[] args) throws JAXBException 
+	public static void main(String[] args)   
 	{
 		launch(args);
 

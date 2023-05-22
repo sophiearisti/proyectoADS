@@ -23,6 +23,22 @@ public class Olimpiada
 		return disciplinasList.getDisciplinasList(); 
 		
 	}
+	public static ArrayList<String> getDisciplinasCategorias() 
+	
+	{
+		
+		ArrayList<String> NombreCategoria = new ArrayList<String>();
+		
+		
+		for(Disciplina indice : disciplinasList.getDisciplinasList()) {
+			
+			NombreCategoria.add(indice.getDisciplina());
+		}
+		
+		return NombreCategoria; 
+				
+	
+	}
 	
 	public static void setDisciplinas(ArrayList<Disciplina> disciplinas) {
 		disciplinasList.setDisciplinasList(disciplinas);
