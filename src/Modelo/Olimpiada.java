@@ -98,9 +98,12 @@ public class Olimpiada
 		return encontrado;
 	}
 	
-	public static Boolean BuscarDeportistaDeDelegacion()
+	public static Boolean BuscarDeportistaDeDelegacion(Integer codigo)
 	{
-		return true;
+		boolean registro = false;
+		registro = ListaDeportistas.deportista_registrado(codigo);
+		
+		return registro;
 	}
 	
 	public static Boolean BuscarDeportistaDeCategoria()

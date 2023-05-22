@@ -79,7 +79,18 @@ public class Deportistas
 		
 		return encontrado;
 	}
-	
+	public Boolean deportista_registrado(Integer NoInscripcion) {
+		
+		getDeportistasList();
+		boolean registrado = false;
+		for(Deportista dep: DeportistasList) {
+			if((dep.getNoInscripcion()==NoInscripcion)&&(dep.getNombre().equals(Nombre))) {
+				registrado = true;
+			}
+		}
+		
+		return registrado;
+	}
 	
 }
 
