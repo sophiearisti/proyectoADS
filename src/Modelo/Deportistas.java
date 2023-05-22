@@ -16,7 +16,25 @@ public class Deportistas
 		
 	}
 
-	public ArrayList<Deportista> getDeportistasList() {
+	public ArrayList<Deportista> getDeportistasList() 
+	{
+		ArrayList<Deportista> Dep3=new ArrayList<> ();
+		
+		DeportistasList.add(new Deportista(1,"Juan Paez",false,123f,false,"Ingenieria","100metros","atletismo"));
+		DeportistasList.add(new Deportista(2,"Laura Pinto",true,123f,false,"Ingenieria","100metros","atletismo"));
+		DeportistasList.add(new Deportista(3,"Mariana Duque",true,123f,true,"Ingenieria","100metros","atletismo"));
+		DeportistasList.add(new Deportista(4,"Fernando Far",true,123f,false,"Ingenieria","100metros","atletismo"));
+		DeportistasList.add(new Deportista(5,"Samuel Guitierrez",false,123f,false,"Ingenieria","100metros","atletismo"));;
+		DeportistasList.add(new Deportista(6,"Santiago Castro",false,123f,false,"Medicina","100metros","atletismo"));
+		DeportistasList.add(new Deportista(7,"Pablo Suarez",true,123f,false,"Medicina","100metros","atletismo"));
+		DeportistasList.add(new Deportista(8,"Melany Rizo",true,123f,true,"Medicina","100metros","atletismo"));
+		DeportistasList.add(new Deportista(9,"Fernando Aristizabal",true,123f,false,"Medicina","100metros","atletismo"));
+		DeportistasList.add(new Deportista(10,"Samuel Paez",false,123f,false,"Medicina","100metros","atletismo"));
+		DeportistasList.add(new Deportista(11,"Pedro Piedra",false,123f,false,"CEA","100metros","atletismo"));
+		DeportistasList.add(new Deportista(12,"Salomon Garcia",true,123f,false,"CEA","100metros","atletismo"));
+		DeportistasList.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","100metros","atletismo"));
+		DeportistasList.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","100metros","atletismo"));
+		
 		return DeportistasList;
 	}
 
