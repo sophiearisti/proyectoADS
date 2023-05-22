@@ -81,7 +81,8 @@ public class Olimpiada
 	
 	public static Boolean AnadirDeportista()
 	{
-	
+		
+		
 		return true;
 	}
 	public static Boolean EliminarDeportista()
