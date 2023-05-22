@@ -15,11 +15,11 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#065180" height="69.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="603.0" />
-      <TableView layoutX="83.0" layoutY="155.0" prefHeight="239.0" prefWidth="401.0" style="-fx-background-color: #065180;">
+      <TableView fx:id="TablaDeportistas" layoutX="83.0" layoutY="155.0" prefHeight="239.0" prefWidth="401.0" style="-fx-background-color: #065180;">
         <columns>
-          <TableColumn prefWidth="128.7126922607422" text="No. Inscripción" />
-          <TableColumn minWidth="9.574539184570312" prefWidth="107.36186218261719" text="Nombre" />
-            <TableColumn prefWidth="162.42544555664062" text="Facultad" />
+          <TableColumn fx:id="ColumnNoInscripcion" prefWidth="128.7126922607422" text="No. Inscripción" />
+          <TableColumn fx:id="ColumnNombre" minWidth="9.574539184570312" prefWidth="107.36186218261719" text="Nombre" />
+            <TableColumn fx:id="ColumnFacultad" prefWidth="162.42544555664062" text="Facultad" />
         </columns>
       </TableView>
       <Button fx:id="BAtras" layoutY="1.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="82.0" style="-fx-background-color: #09456c;" text="Menú" textFill="WHITE">
@@ -29,7 +29,7 @@
       </Button>
       <Text layoutX="117.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista oficial de deportistas" wrappingWidth="366.1611328125">
          <font>
-            <Font size="33.0" />
+            <Font size="27.0" />
          </font>
       </Text>
       <ImageView fitHeight="72.0" fitWidth="100.0" layoutX="525.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
@@ -38,6 +38,6 @@
          </image>
       </ImageView>
       <ScrollBar layoutX="484.0" layoutY="155.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="16.0" />
-      <ComboBox layoutX="80.0" layoutY="115.0" prefWidth="150.0" promptText="Delegacion" style="-fx-background-color: #E7DECD;" />
+      <ComboBox fx:id="ComboBox" layoutX="80.0" layoutY="115.0" prefWidth="150.0" promptText="Competencia" style="-fx-background-color: #E7DECD;" />
    </children>
 </AnchorPane>
