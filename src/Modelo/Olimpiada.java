@@ -4,22 +4,16 @@ import java.util.ArrayList;
 
 public class Olimpiada 
 {
-	private static ArrayList<Delegacion> Delegaciones=new ArrayList<Delegacion>();
-	private static ArrayList<Disciplina> Disciplinas=new ArrayList<Disciplina>();
-	private static ArrayList<Juez> Jueces;
-	private static ArrayList<Deportista> Deportistas=new ArrayList<Deportista>();
-	
-	
-	public Olimpiada(ArrayList<Delegacion> delegaciones, ArrayList<Disciplina> disciplinas, ArrayList<Juez> jueces) 
-	{
-		Delegaciones = delegaciones;
-		Disciplinas = disciplinas;
-		Jueces = jueces;
-	}
+	private static Delegaciones ListaDelegaciones=new Delegaciones();
+	private static Deportistas ListaDeportistas=new Deportistas();
+	private static Disciplinas disciplinasList=new Disciplinas();
+	private static Jueces ListaJueces=new Jueces();
 	
 	public static ArrayList<Delegacion> getDelegaciones() {
 		
-		ArrayList<Delegacion> prueba=new ArrayList<Delegacion> ();
+		return ListaDelegaciones.getDelegacionesList();
+		
+		/*ArrayList<Delegacion> prueba=new ArrayList<Delegacion> ();
 		ArrayList<Deportista> Dep=new ArrayList<> ();
 		ArrayList<Deportista> Dep1=new ArrayList<> ();
 		ArrayList<Deportista> Dep2=new ArrayList<> ();
@@ -54,16 +48,17 @@ public class Olimpiada
 		prueba.add(new Delegacion("CEA","Pablo Suarez",Dep2.size(),Dep2));
 		Delegaciones.add(new Delegacion("Medicina","Pablo Suarez",Dep1.size(),Dep1));
 		
-		return prueba;
+		return prueba;*/
 	}
 	
 	public static void setDelegaciones(ArrayList<Delegacion> delegaciones) {
-		Delegaciones = delegaciones;
+		ListaDelegaciones.setDelegacionesList(delegaciones);
 	}
 	
 	public static ArrayList<Disciplina> getDisciplinas() 
 	{
-		ArrayList<Categoria> categorias1=new ArrayList<Categoria> ();
+		return disciplinasList.getDisciplinasList(); 
+		/*ArrayList<Categoria> categorias1=new ArrayList<Categoria> ();
 		ArrayList<Categoria> categorias2=new ArrayList<Categoria> ();
 		
 		ArrayList<Deportista> Dep1=new ArrayList<> ();
@@ -100,24 +95,26 @@ public class Olimpiada
 		
 		Disciplinas.add(new Disciplina(categorias2,"baloncesto"));
 		
-		return Disciplinas;
+		return Disciplinas;*/
 	}
 	
 	public static void setDisciplinas(ArrayList<Disciplina> disciplinas) {
-		Disciplinas = disciplinas;
+		disciplinasList.setDisciplinasList(disciplinas);
 	}
 	
 	public static ArrayList<Juez> getJueces() {
-		return Jueces;
+		return ListaJueces.getJueces();
 	}
 	
 	public void setJueces(ArrayList<Juez> jueces) {
-		Jueces = jueces;
+		ListaJueces.setJueces(jueces);
 	}
 	
 	public static ArrayList<Deportista> getDeportistas() 
-	{   
-		ArrayList<Deportista> Dep3=new ArrayList<> ();
+	{ 
+		return ListaDeportistas.getDeportistasList();
+		
+		/*ArrayList<Deportista> Dep3=new ArrayList<> ();
 	
 		Deportistas.add(new Deportista(1,"Juan Paez",false,123f,false,"Ingenieria","100metros","atletismo"));
 		Deportistas.add(new Deportista(2,"Laura Pinto",true,123f,false,"Ingenieria","100metros","atletismo"));
@@ -134,15 +131,13 @@ public class Olimpiada
 		Deportistas.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","100metros","atletismo"));
 		Deportistas.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","100metros","atletismo"));
 		
-		return Deportistas;
+		return Deportistas;*/
 	}
 
 	public static void setDeportistas(ArrayList<Deportista> deportistas) {
-		Deportistas = deportistas;
+		ListaDeportistas.setDeportistasList(deportistas);
 	}
 
-	
-	
 	
 	
 	public static void EditarDeportista(Integer id, String nombre, Boolean asistenciaPrimeraVez, Float estatura,
@@ -151,55 +146,23 @@ public class Olimpiada
 		getDisciplinas();
 		getDelegaciones();
 		
-		ActualizarDeportistaDelegacion(id,nombre, asistenciaPrimeraVez, estatura,
+		ListaDelegaciones.ActualizarDeportistaDelegacion(id,nombre, asistenciaPrimeraVez, estatura,
 				abanderado,delegacionPertenece);
 		
-		ActualizarDeportistaCategoria(id,nombre, asistenciaPrimeraVez, estatura,
+		disciplinasList.ActualizarDeportistaCategoria(id,nombre, asistenciaPrimeraVez, estatura,
 				abanderado,categoriaPertenece,disciplinaPertenece);
 		
-		for(Deportista dep: Deportistas)
-		{
-			if(id==dep.getNoInscripcion())
-			{
-				dep.setNombre(nombre);
-				dep.setAsistenciaPrimeraVez(asistenciaPrimeraVez);
-				dep.setAbanderado(abanderado);
-				dep.setEstatura(estatura);
-			}
-			
-		}
 		
+		ListaDeportistas.EditarDeportista(id, nombre, asistenciaPrimeraVez, estatura, abanderado, delegacionPertenece, categoriaPertenece, disciplinaPertenece);	
 	}
-	public static void ActualizarDeportistaCategoria(Integer id,String nombre, Boolean asistenciaPrimeraVez, Float estatura,
-			Boolean abanderado,String categoriaPertenece,String disciplinaPertenece)
-	{
-		for(Disciplina disp: Disciplinas)
-		{
-			
-			if(disp.getDisciplina().equals(disciplinaPertenece))
-			{
-				disp.actualizarDeportista(id, nombre, asistenciaPrimeraVez, estatura, abanderado, categoriaPertenece);
-			}
-		}
-	}
-	public static void ActualizarDeportistaDelegacion(Integer id,String nombre, Boolean asistenciaPrimeraVez, Float estatura,
-			Boolean abanderado,String delegacionPertenece)
-	{
-		
-		for(Delegacion del: Delegaciones)
-		{
-			if(del.getFacultad().equals(delegacionPertenece))
-			{
-				//System.out.println("si");
-				del.ActualizarDeportista(id,nombre, asistenciaPrimeraVez, estatura,
-						abanderado);
-			}
-		}
-	}
-	
 	
 	public static Boolean AnadirDelegacion()
 	{
+		if(BuscarDelegacion())
+		{
+			
+		}
+		
 		return true;
 	}
 	
@@ -223,40 +186,10 @@ public class Olimpiada
 	
 	public static Deportista BuscarDeportista(Integer NoInscripcion)
 	{
-		Deportista encontrado=null;
-		
-		getDeportistas();
-		
-		for(Deportista dep: Deportistas)
-		{
-			if(dep.getNoInscripcion()==NoInscripcion)
-			{
-				encontrado=dep;
-			}
-		}
+		Deportista encontrado=ListaDeportistas.BuscarDeportista(NoInscripcion);
 		
 		return encontrado;
 	}
-	/*
-	public static String BuscarCategoriaDeportista(Integer NoInscripcion)
-	{
-		
-		getDeportistas();
-		
-		String nombreCategoria;
-		
-		for(Disciplina disp: Disciplinas)
-		{
-			String encontrado=disp.buscarCategoriaDeportista(NoInscripcion);
-			if(encontrado!="")
-			{
-				return encontrado;
-			}
-			
-		}
-		
-		return "";
-	}*/
 	
 	public static Boolean BuscarDeportistaDeDelegacion()
 	{
@@ -284,6 +217,10 @@ public class Olimpiada
 	
 	public static Boolean AnadirCategoria()
 	{
+		if( BuscarCategoria())
+		{
+			
+		}
 		return true;
 	}
 	
@@ -300,12 +237,18 @@ public class Olimpiada
 	
 	public static Boolean AnadirDisciplina()
 	{
+		if(BuscarDisciplina())
+		{
+			
+		}
 		return true;
 	}
+	
 	public static Boolean BuscarDisciplina()
 	{
 		return true;
 	}
+	
 	public static ArrayList<Disciplina> ObtenerDisciplinas()
 	{
 		ArrayList<Disciplina> k=new ArrayList<Disciplina>();
