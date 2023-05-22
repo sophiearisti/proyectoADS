@@ -90,8 +90,7 @@ public class ControladorEditarDeportista
     void BuscarDeportista(ActionEvent event) 
 	{//Olimpiada.ObtenerDisciplinas()
 		Deportista dep=Olimpiada.BuscarDeportista(Integer.parseInt(TextBuscador.getText()));
-		Categoria cat;
-		Disciplina dis;
+		
 		
 		if(dep!=null)
 		{
