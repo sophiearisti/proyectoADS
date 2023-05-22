@@ -2,10 +2,19 @@ package Modelo;
 
 import java.util.ArrayList;
 
+/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;*/
+
+//@XmlRootElement(name = "Disciplina")
+//@XmlAccessorType(XmlAccessType.FIELD)
 public class Disciplina 
 {
+	//@XmlAttribute(name = "Categorias")
 	private ArrayList<Categoria> Categorias;
 	
+	//@XmlAttribute(name = "Disciplina")
 	private String Disciplina;
 	
 	public Disciplina() 

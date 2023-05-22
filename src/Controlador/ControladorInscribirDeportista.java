@@ -108,13 +108,13 @@ public class ControladorInscribirDeportista implements Initializable {
 
 
         
-        if(Olimpiada.BuscarDeportistaDelegacion(id))
+        if(Olimpiada.BuscarDeportista(id)!=null)
         {
-            Olimpiada.anadir_deportista(disciplina, categoria,delegacion, primeraVez, abanderado, estatura, id, nombre);
+            Olimpiada.AnadirDeportista(disciplina, categoria,delegacion, primeraVez, abanderado, estatura, id, nombre);
 
         }
         else {
-            System.out.prinln("El deportista ingresado ya existe");
+            System.out.println("El deportista ingresado ya existe");
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Number Format Exception");
             alert.setHeaderText("El deportista ya existe");

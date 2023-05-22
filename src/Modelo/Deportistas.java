@@ -2,8 +2,18 @@ package Modelo;
 
 import java.util.ArrayList;
 
+/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;*/
+
+
+//@XmlRootElement(name = "Deportistas")
+//@XmlAccessorType(XmlAccessType.FIELD)
+
 public class Deportistas 
 {
+	//@XmlElement(name = "DeportistasList")
 	private ArrayList<Deportista> DeportistasList=new ArrayList<Deportista>();
 
 	public Deportistas(ArrayList<Deportista> deportistasList) {

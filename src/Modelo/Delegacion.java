@@ -2,12 +2,29 @@ package Modelo;
 
 import java.util.ArrayList;
 
+/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;*/
+
+
+//@XmlRootElement(name = "Delegacion")
+//@XmlAccessorType(XmlAccessType.FIELD)
 public class Delegacion 
 {
+	//@XmlAttribute(name = "Facultad")
 	private String Facultad;
+	
+	//@XmlAttribute(name = "Representante")
 	private String Representante;
+	
+	//@XmlAttribute(name = "NumeroParticipantes")
 	private Integer NumeroParticipantes;
+	
+	//@XmlAttribute(name = "Puntuacion")
 	private Integer Puntuacion;
+	
+	//@XmlAttribute(name = "Deportistas")
 	private ArrayList<Deportista> Deportistas;
 	
 	//Constructores

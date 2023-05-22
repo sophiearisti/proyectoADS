@@ -2,15 +2,28 @@ package Modelo;
 
 import java.util.ArrayList;
 
+/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;*/
+
+//@XmlRootElement(name = "Categoria")
+//@XmlAccessorType(XmlAccessType.FIELD)
 public class Categoria {
 	
+	//@XmlAttribute(name = "Nombre")
 	private String Nombre;
 	
+	//@XmlAttribute(name = "Individual")
 	private Boolean Individual;
 	
+	//@XmlAttribute(name = "Finalizado")
 	private Boolean Finalizado;
 	
+	//@XmlAttribute(name = "Deportistas")
 	private ArrayList<Deportista> Deportistas;
+	
+	//@XmlAttribute(name = "Resultados")
 	private ArrayList<Resultado> resultados;
 	
 	
@@ -116,35 +129,6 @@ public class Categoria {
 		resultados.add(resultado);
 	}
 	
-	/*public boolean GuardarResultadoMedalla(Integer NoDeportista, String Medalla) 
-	
-	{
-		
-	
-	
-	public ArrayList<Deportista> BuscarGanadores(){
-		
-		ArrayList<Deportista> DeportistasGanadores;
-		for(Deportista pivote : Deportistas ) {
-			
-		if(pivote.getMedalla().equalsIgnoreCase("oro")) 
-		{
-			DeportistasGanadores.add(pivote);
-		}else if (pivote.getMedalla().equalsIgnoreCase("plata")) 
-			{
-			
-				DeportistasGanadores.add(pivote);
-			}else if(pivote.getMedalla().equalsIgnoreCase("bronce")) 
-				{
-					DeportistasGanadores.add(pivote);
-				}
-		
-		}
-		
-		return DeportistasGanadores;
-	}
-	
-	}*/
 	
 	public ArrayList<Deportista> ObtenerDeportistas(){
 		return this.Deportistas;

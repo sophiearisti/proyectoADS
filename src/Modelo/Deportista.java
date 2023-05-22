@@ -2,20 +2,44 @@ package Modelo;
 
 import java.io.File;
 
-import jakarta.xml.bind.JAXBContext;
+/*import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;*/
 
+
+//@XmlRootElement(name = "Deportista")
+//@XmlAccessorType(XmlAccessType.FIELD)
 public class Deportista {
 
+	//@XmlAttribute(name = "NoInscripcion")
 	private Integer NoInscripcion;
+	
+	//@XmlAttribute(name = "Nombre")
 	private String Nombre;
+	
+	//@XmlAttribute(name = "AsistenciaPrimeraVez")
 	private Boolean AsistenciaPrimeraVez;
+	
+	//@XmlAttribute(name = "Estatura")
 	private Float Estatura;
+	
+	//@XmlAttribute(name = "Medalla")
 	private String Medalla;
+	
+	//@XmlAttribute(name = "Abanderado")
 	private Boolean Abanderado;
+	
+	//@XmlAttribute(name = "DelegacionPertenece")
 	private String DelegacionPertenece;
+	
+	//@XmlAttribute(name = "CategoriaPertenece")
 	private String CategoriaPertenece;
+	
+	//@XmlAttribute(name = "DisciplinaPertenece")
 	private String DisciplinaPertenece;
 	
 	

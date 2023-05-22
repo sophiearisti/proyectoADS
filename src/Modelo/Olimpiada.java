@@ -94,13 +94,14 @@ public class Olimpiada
 		return true;
 	}
 	
-	
-	public static Boolean AnadirDeportista()
+	public static void AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
+			boolean abanderado, Float estatura, Integer id, String nombre) 
 	{
+		// TODO Auto-generated method stub
 		
-		
-		return true;
 	}
+	
+	
 	public static Boolean EliminarDeportista()
 	{
 		return true;
@@ -115,13 +116,13 @@ public class Olimpiada
 		return encontrado;
 	}
 	
-	public static Boolean BuscarDeportistaDeDelegacion(Integer codigo, String nombre)
+	/*public static Boolean BuscarDeportistaDeDelegacion(Integer codigo, String nombre)
 	{
 		boolean registro = false;
 		registro = ListaDeportistas.deportista_registrado(codigo,nombre);
 		
 		return registro;
-	}
+	}*/
 	
 	public static Boolean BuscarDeportistaDeCategoria()
 	{
@@ -155,6 +156,7 @@ public class Olimpiada
 	{
 		return true;
 	}
+	
 	public static ArrayList<Categoria> ObtenerCategoriasDeDisciplina(String nombreDisciplina)
 	{
 		ArrayList<Categoria> k=new ArrayList<Categoria>();
