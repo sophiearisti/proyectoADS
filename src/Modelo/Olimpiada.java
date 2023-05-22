@@ -115,10 +115,10 @@ public class Olimpiada
 		return encontrado;
 	}
 	
-	public static Boolean BuscarDeportistaDeDelegacion(Integer codigo)
+	public static Boolean BuscarDeportistaDeDelegacion(Integer codigo, String nombre)
 	{
 		boolean registro = false;
-		registro = ListaDeportistas.deportista_registrado(codigo);
+		registro = ListaDeportistas.deportista_registrado(codigo,nombre);
 		
 		return registro;
 	}

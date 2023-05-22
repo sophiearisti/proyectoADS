@@ -79,7 +79,8 @@ public class Deportistas
 		
 		return encontrado;
 	}
-	public Boolean deportista_registrado(Integer NoInscripcion) {
+	
+	public Boolean deportista_registrado(Integer NoInscripcion, String Nombre) {
 		
 		getDeportistasList();
 		boolean registrado = false;
