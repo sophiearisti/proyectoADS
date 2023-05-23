@@ -26,14 +26,14 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#09456c" height="5.0" layoutX="7.0" layoutY="382.0" stroke="TRANSPARENT" strokeType="INSIDE" width="573.0" />
-      <Button fx:id="salir" layoutX="17.0" layoutY="9.0" mnemonicParsing="false" onAction="#SalirDeAplicacion" style="-fx-background-color: transparent;" text="salir">
+      <Button fx:id="salir" layoutX="6.0" layoutY="11.0" mnemonicParsing="false" onAction="#SalirDeAplicacion" style="-fx-background-color: transparent;" text="Guardar y salir">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
       <Button fx:id="BJuez" layoutX="21.0" layoutY="339.0" mnemonicParsing="false" onAction="#AbrirPantallaJuez" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: transparent;" text="Juez" />
       <Button fx:id="BMenuComitiva" layoutX="151.0" layoutY="339.0" mnemonicParsing="false" onAction="#MenucOMITIVA" prefHeight="44.0" prefWidth="81.0" style="-fx-background-color: transparent;" text="Comitiva" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#09456c" height="36.0" layoutX="81.0" layoutY="7.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#09456c" height="36.0" layoutX="130.0" layoutY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1.0" />
       <Text layoutX="22.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido al sistema de la oplimpiada javeriana. Seleccione el tipo de perfil" />
    </children>
 </AnchorPane>

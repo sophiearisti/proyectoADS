@@ -2,6 +2,7 @@ package Controlador;
 
 import java.io.IOException;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -40,7 +41,8 @@ public class ControladorMenuOlimpiada {
     @FXML
     void SalirDeAplicacion(ActionEvent event) 
     {
-
+ 
+    	Platform.exit();
     }
     
     @FXML
@@ -51,7 +53,7 @@ public class ControladorMenuOlimpiada {
    	 	Parent root;
    	 
    	 
-   	 	root = FXMLLoader.load(getClass().getResource("/Vista/ListaDeDeportistasPorCompetencia.fxml"));
+   	 	root = FXMLLoader.load(getClass().getResource("/Vista/MenuJuez.fxml"));
 	    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
