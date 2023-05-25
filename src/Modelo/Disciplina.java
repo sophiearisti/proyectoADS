@@ -27,6 +27,9 @@ public class Disciplina
 		Disciplina = disciplina;
 	}
 	
+	public ArrayList <Categoria> getCategorias() {
+		return Categorias;
+	}
 
 	public Disciplina(ArrayList<Categoria> categorias, String disciplina) {
 		super();
@@ -89,6 +92,7 @@ public class Disciplina
 		return insertado;
 	}
 	
+<<<<<<< HEAD
 	public ArrayList<Deportista> ObtenerDeportistaCategoria(String NombreCategoria) {
 		ArrayList<Deportista> ListDeportista = new ArrayList<>();
 		
@@ -123,4 +127,6 @@ public class Disciplina
 		return NombreCategoria;
 	}
 	
+=======
+>>>>>>> 1b6645df5a5bef6099d5ab45b3654f2261cc1d0d
 }

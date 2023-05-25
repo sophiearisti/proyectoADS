@@ -58,12 +58,12 @@ public class ControladorInscribirDeportista implements Initializable {
         choiceBoxDelegacion.getItems().addAll(delgaciones);
         choiceBoxDelegacion.setOnAction(this::ingresarDatosDeportista);
         choiceBoxDisciplina.getItems().addAll(disciplinas);
-        // ArrayList <String> categorias = Olimpiada.buscarCategorias(delegaciones);
-         String[] array = {"200mt", "400mt", "800mt", "10000mt"};
-        for(int i = 0; i < array.length; i++) {
-            categorias.add(array[i]);
+        ArrayList <Categoria> categorias = Olimpiada.ObtenerCategoriasDeDisciplina(choiceBoxDisciplina.getValue());
+        ArrayList <String> categoriasChoice = new ArrayList <String>();
+        for(int i = 0; i < categorias.size(); i++) {
+            categoriasChoice.add(categorias.get(i).getNombre());
         }
-        choiceBoxCategoria.getItems().addAll(categorias);
+        choiceBoxCategoria.getItems().addAll(categoriasChoice);
 
     }
 

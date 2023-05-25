@@ -89,6 +89,28 @@ public class Deportistas
 		
 		return encontrado;
 	}
+	public Integer buscar_indice_deportista(Integer NoInscripcion)
+	{
+		int encontrado = 0;
+		int contador = 0;
+		
+		getDeportistasList();
+		
+		for(Deportista dep: DeportistasList)
+		{
+			contador++;
+			if(dep.getNoInscripcion()==NoInscripcion)
+			{
+				encontrado=contador;
+			}
+		}
+		
+		return encontrado;
+	}
+	
+	public void eliminar_deportista(Integer indice) {
+		this.DeportistasList.remove(indice);
+	}
 	
 	public Boolean deportista_registrado(Integer NoInscripcion, String Nombre) {
 		

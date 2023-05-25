@@ -14,39 +14,34 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="655.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#065180" height="85.0" layoutX="-3.0" layoutY="-7.0" stroke="TRANSPARENT" strokeType="INSIDE" width="665.0" />
-      <ChoiceBox fx:id="ingresoDisciplina" layoutX="287.0" layoutY="140.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
-      <RadioButton layoutX="138.0" layoutY="216.0" mnemonicParsing="false" text="Sí">
+      <ChoiceBox fx:id="choiceBoxDisciplina" layoutX="287.0" layoutY="140.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
+      <RadioButton fx:id="asistenciaPrimeraVezSi" layoutX="138.0" layoutY="216.0" mnemonicParsing="false" text="Sí">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="210.0" layoutY="216.0" mnemonicParsing="false" text="No">
+      <RadioButton fx:id="asistenciaPrimeraVezNo" layoutX="210.0" layoutY="216.0" mnemonicParsing="false" text="No">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="400.0" layoutY="215.0" mnemonicParsing="false" text="Sí">
+      <RadioButton fx:id="abanderadoSi" layoutX="400.0" layoutY="215.0" mnemonicParsing="false" text="Sí">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="461.0" layoutY="216.0" mnemonicParsing="false" text="No">
+      <RadioButton fx:id="abanderadoNo" layoutX="461.0" layoutY="216.0" mnemonicParsing="false" text="No">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <Button layoutX="193.0" layoutY="341.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Inscribir">
+      <Button fx:id="botonInscribir" layoutX="280.0" layoutY="341.0" mnemonicParsing="false" onAction="#botonInscribir" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Inscribir">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="376.0" layoutY="338.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #D4B483;" text="Borrar">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <TextField layoutX="259.0" layoutY="268.0" promptText="Nombre" />
-      <TextField layoutX="445.0" layoutY="267.0" promptText="Estatura" />
+      <TextField fx:id="nombreText" layoutX="259.0" layoutY="268.0" promptText="Nombre" />
+      <TextField fx:id="estaturaText" layoutX="445.0" layoutY="267.0" promptText="Estatura" />
       <Label fx:id="labelCategoria" layoutX="145.0" layoutY="118.0" prefHeight="17.0" prefWidth="97.0" text="Delegación">
          <font>
             <Font size="14.0" />
@@ -72,9 +67,9 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="ingresoDelegación" layoutX="108.0" layoutY="140.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
-      <ChoiceBox fx:id="ingresoCategoria" layoutX="471.0" layoutY="140.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
-      <TextField layoutX="69.0" layoutY="269.0" promptText="id" />
+      <ChoiceBox fx:id="choiceBoxDelegacion" layoutX="108.0" layoutY="140.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
+      <ChoiceBox fx:id="choiceBoxCategoria" layoutX="471.0" layoutY="140.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
+      <TextField fx:id="idText" layoutX="69.0" layoutY="269.0" promptText="id" />
       <Button layoutY="-1.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="85.0" style="-fx-background-color: #09456c;" text="Atrás" textFill="WHITE">
          <font>
             <Font size="16.0" />
