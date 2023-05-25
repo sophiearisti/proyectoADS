@@ -24,7 +24,7 @@ public class Categoria {
 	private ArrayList<Deportista> Deportistas;
 	
 	//@XmlAttribute(name = "Resultados")
-	private ArrayList<Resultado> resultados;
+	Resultado resultados;
 	
 	
 	//Constructores
@@ -90,11 +90,11 @@ public class Categoria {
 		Deportistas = deportistas;
 	}
 
-	public ArrayList<Resultado> getResultados() {
+	public Resultado getResultados() {
 		return resultados;
 	}
 
-	public void setResultados(ArrayList<Resultado> resultados) {
+	public void setResultados(Resultado resultados) {
 		this.resultados = resultados;
 	}
 	
@@ -121,12 +121,6 @@ public class Categoria {
 		}
 		
 		return insertado;
-	}
-	
-	
-	public void AgregarResultado(Resultado resultado) {
-		
-		resultados.add(resultado);
 	}
 	
 	

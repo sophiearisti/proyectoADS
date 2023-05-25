@@ -112,28 +112,11 @@ public class Olimpiada
 	public static void AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
 			boolean abanderado, Float estatura, Integer id, String nombre) 
 	{
-		anadir_deportista_delegacion(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre);
-		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
-		ListaDeportistas.getDeportistasList().add(elDeportista);
+		// TODO Auto-generated method stub
 		
 	}
 	
-<<<<<<< HEAD
 ///////////////////////////////////////CASO DE USO ELIMINAR DEPORTISTA////////////////////////////////////////	
-=======
-	public static void anadir_deportista_delegacion(String disciplina, String categoria, String delegacion, boolean primeraVez,
-			boolean abanderado, Float estatura, Integer id, String nombre) {
-		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
-		
-		for(Delegacion delegacion1: ListaDelegaciones.getDelegacionesList()) {
-			if(delegacion1.getFacultad().equals(delegacion)) {
-				delegacion1.AgregarDeportista(elDeportista);
-			}
-		}
-	}
-	
-	
->>>>>>> 1b6645df5a5bef6099d5ab45b3654f2261cc1d0d
 	public static Boolean EliminarDeportista()
 	{
 		return true;
@@ -158,45 +141,9 @@ public class Olimpiada
 		return k;
 	}
 	
-<<<<<<< HEAD
-=======
-	
-	public static Integer obtener_indice_deportista(Integer codigo) {
-		Integer indice = ListaDeportistas.buscar_indice_deportista(codigo);
-		return indice;
-		
-	}
-	
-	public static void eliminar_deportista(Integer indice) {
-		ListaDeportistas.getDeportistasList().remove(indice);
-	}
-	
-	
-	
-	public static Boolean AnadirCategoria()
-	{
-		if( BuscarCategoria())
-		{
-			
-		}
-		return true;
-	}
-	
-	public static Boolean BuscarCategoria()
-	{
-		return true;
-	}
-	
->>>>>>> 1b6645df5a5bef6099d5ab45b3654f2261cc1d0d
 	public static ArrayList<Categoria> ObtenerCategoriasDeDisciplina(String nombreDisciplina)
 	{
 		ArrayList<Categoria> k=new ArrayList<Categoria>();
-	
-		for(Disciplina disciplina: disciplinasList.getDisciplinasList()) {
-			if(disciplina.getDisciplina().equals(nombreDisciplina)) {
-				k = disciplina.getCategorias();
-			}
-		}
 		return k;
 	}
 	public static ArrayList<Disciplina> ObtenerDisciplinas()
