@@ -6,6 +6,7 @@ import Modelo.Deportista;
 import Modelo.Olimpiada;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,7 +20,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 
@@ -57,25 +57,23 @@ public class ControladorListaDeDeportistasPorCompetencia implements Initializabl
 	    
 	    
 	   public void agregarDeportistas(ActionEvent event) 
-	   {
+	   {	this.listaDeportistas.clear();
+		   
 		   ArrayList<Deportista> ListAuxiliar = new ArrayList<Deportista>();
 		   
 		   ListAuxiliar = Olimpiada.LlenarTabla(ComboBox.getValue());
 		   
 		   for (Deportista indice : ListAuxiliar) {
 			   
-			   if(this.listaDeportistas.contains(indice)) {
+			  // if(this.listaDeportistas.contains(indice)) {
 				   this.listaDeportistas.add(indice);
 				   this.TablaDeportistas.setItems(listaDeportistas);
-			   }
+			  // }
 		   }
 	   }
 	   
-	   
-	   
-	  
-	    
-	    void IrAMenuComitiva(ActionEvent event) throws IOException 
+	
+	   public void IrAMenuJuez(ActionEvent event) throws IOException
 	    {
 	    	Stage stage;
 	   	 	Scene scene;
@@ -89,7 +87,6 @@ public class ControladorListaDeDeportistasPorCompetencia implements Initializabl
 			stage.show();
 	    }
 
-	
 	    
 
 }

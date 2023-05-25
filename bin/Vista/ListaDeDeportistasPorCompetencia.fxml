@@ -22,7 +22,7 @@
             <TableColumn fx:id="ColumnFacultad" prefWidth="162.42544555664062" text="Facultad" />
         </columns>
       </TableView>
-      <Button fx:id="BAtras" layoutY="1.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="82.0" style="-fx-background-color: #09456c;" text="Menú" textFill="WHITE">
+      <Button fx:id="BAtras" layoutY="1.0" mnemonicParsing="false" onAction="#IrAMenuJuez" prefHeight="65.0" prefWidth="82.0" style="-fx-background-color: #09456c;" text="Menú" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
@@ -38,6 +38,6 @@
          </image>
       </ImageView>
       <ScrollBar layoutX="484.0" layoutY="155.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="16.0" />
-      <ComboBox fx:id="ComboBox" layoutX="80.0" layoutY="115.0" prefWidth="150.0" promptText="Competencia" style="-fx-background-color: #E7DECD;" />
+      <ComboBox fx:id="ComboBox" layoutX="80.0" layoutY="115.0" onAction="#agregarDeportistas" prefWidth="150.0" promptText="Competencia" style="-fx-background-color: #E7DECD;" />
    </children>
 </AnchorPane>
