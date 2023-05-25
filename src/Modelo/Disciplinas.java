@@ -67,7 +67,54 @@ public class Disciplinas
 		
 		categorias2.add(new Categoria("balfemenino",true,false,Dep2));
 		
+		Dep2.clear();
+		Dep2.add(new Deportista(11,"Pedro Piedra",false,123f,false,"CEA","balmasculino","baloncesto"));
+		Dep2.add(new Deportista(12,"Salomon Garcia",true,123f,false,"CEA","balmasculino","baloncesto"));
+		Dep2.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","balmasculino","baloncesto"));
+		Dep2.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","balmasculino","baloncesto"));
+		
+		categorias2.add(new Categoria("balmasculino",true,false,Dep2));
+		
 		DisciplinasList.add(new Disciplina(categorias2,"baloncesto"));
+		
+		Dep2.clear();
+		
+		Dep2.add(new Deportista(11,"Pedro Piedra",false,123f,false,"CEA","ultimate femenino","ultimate"));
+		Dep2.add(new Deportista(12,"Salomon Garcia",true,123f,false,"CEA","ultimate femenino","ultimate"));
+		Dep2.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","ultimate femenino","ultimate"));
+		Dep2.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","ultimate femenino","ultimate"));
+		
+		categorias2.add(new Categoria("ultimate femenino",true,false,Dep2));
+		
+		Dep2.clear();
+		Dep2.add(new Deportista(11,"Pedro Piedra",false,123f,false,"CEA","ultimate masculino","ultimate"));
+		Dep2.add(new Deportista(12,"Salomon Garcia",true,123f,false,"CEA","ultimate masculino","ultimate"));
+		Dep2.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","ultimate masculino","ultimate"));
+		Dep2.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","ultimate masculino","ultimate"));
+		
+		categorias2.add(new Categoria("ultimate masculino",true,false,Dep2));
+		
+		DisciplinasList.add(new Disciplina(categorias2,"ultimate"));
+		
+        Dep2.clear();
+		
+		Dep2.add(new Deportista(11,"Pedro Piedra",false,123f,false,"CEA","PPgrupal","ultimate"));
+		Dep2.add(new Deportista(12,"Salomon Garcia",true,123f,false,"CEA","PPgrupal","ultimate"));
+		Dep2.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","PPgrupal","ultimate"));
+		Dep2.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","PPgrupal","ultimate"));
+		
+		categorias2.add(new Categoria("PPgrupal",true,false,Dep2));
+		
+		Dep2.clear();
+		Dep2.add(new Deportista(11,"Pedro Piedra",false,123f,false,"CEA","PPMixto","ping pong"));
+		Dep2.add(new Deportista(12,"Salomon Garcia",true,123f,false,"CEA","PPMixto","ping pong"));
+		Dep2.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","PPMixto","ping pong"));
+		Dep2.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","PPMixto","ping pong"));
+		
+		categorias2.add(new Categoria("PPMixto",true,false,Dep2));
+		
+		
+		DisciplinasList.add(new Disciplina(categorias2,"ping pong"));
 	
 	}
 	
