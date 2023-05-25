@@ -103,10 +103,6 @@ public class ControladorInscribirDeportista implements Initializable {
         }
 
         System.out.println(nombre + " " + estatura + " " + id);
-
-
-
-
         
         if(Olimpiada.BuscarDeportista(id)!=null)
         {

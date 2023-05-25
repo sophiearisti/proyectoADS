@@ -33,7 +33,13 @@ import Modelo.Olimpiada;
 public class ControladorDesfilePorDelegacion implements Initializable
 {
 	private Map<String, ArrayList<Deportista>> delegacionesMap = new TreeMap<>();
-
+	
+	ArrayList<String> NombresOrdenados;
+	
+    private Integer Iterador=0;
+     
+    private Integer Maximo;
+	 
     @FXML
     private Button BAnterior;
 
@@ -46,12 +52,6 @@ public class ControladorDesfilePorDelegacion implements Initializable
     @FXML
     private Text NombreDelegacion;
     
-    private Integer Iterador=0;
-    
-    private Integer Maximo;
-    
-    ArrayList<String> NombresOrdenados;
-    
     @FXML
     private TableColumn<FilaTablaDesfile, Integer> IdCol;
 
@@ -60,7 +60,6 @@ public class ControladorDesfilePorDelegacion implements Initializable
     
      @FXML
     private TableColumn<FilaTablaDesfile, String> tipoParticipanteCol;
-
 
     @FXML
     private TableView<FilaTablaDesfile> TablaDeportistas;
@@ -72,6 +71,7 @@ public class ControladorDesfilePorDelegacion implements Initializable
     void DelegacionAnterior(ActionEvent event) 
     {
     	this.Iterador--;
+    	
     	if(Iterador<0)
     	{
     		this.Iterador++;
@@ -91,7 +91,7 @@ public class ControladorDesfilePorDelegacion implements Initializable
 
     
     @FXML
-    void DlegacionSiguiente(ActionEvent event) 
+    void DelegacionSiguiente(ActionEvent event) 
     {
     	this.Iterador++;
     	if(this.Iterador>Maximo)
@@ -139,9 +139,14 @@ public class ControladorDesfilePorDelegacion implements Initializable
     	
     	ArrayList<Deportista> DeportistasOrdenados=ordenarDeportistas(delegacionesMap.get(NombresOrdenados.get(Iterador)));
     	
+    	IdCol.setCellValueFactory(new PropertyValueFactory<FilaTablaDesfile, Integer>("IDEstudiante"));	
+		
+    	NombreCol.setCellValueFactory(new PropertyValueFactory<FilaTablaDesfile, String>("Nombre"));	
+		
+    	tipoParticipanteCol.setCellValueFactory(new PropertyValueFactory<FilaTablaDesfile, String>("TipoEstudiante"));	
+    	
     	LlenarTabla(DeportistasOrdenados);
-    	
-    	
+    		
 	}
     
     private ArrayList<Deportista> ordenarDeportistas(ArrayList<Deportista> DeportistasDeLaDelegacion)
@@ -181,12 +186,6 @@ public class ControladorDesfilePorDelegacion implements Initializable
     	listaDeportistas.clear();
     	
     	TablaDeportistas.setItems(listaDeportistas);	
-    	
-    	IdCol.setCellValueFactory(new PropertyValueFactory<FilaTablaDesfile, Integer>("IDEstudiante"));	
-		
-    	NombreCol.setCellValueFactory(new PropertyValueFactory<FilaTablaDesfile, String>("Nombre"));	
-		
-    	tipoParticipanteCol.setCellValueFactory(new PropertyValueFactory<FilaTablaDesfile, String>("TipoEstudiante"));	
 	
     	for (Deportista deportista : DeportistasDeLaDelegacion) 
     	{

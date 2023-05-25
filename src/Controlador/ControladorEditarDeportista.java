@@ -91,7 +91,7 @@ public class ControladorEditarDeportista
 	{//Olimpiada.ObtenerDisciplinas()
 		Deportista dep=Olimpiada.BuscarDeportista(Integer.parseInt(TextBuscador.getText()));
 		
-		
+		//añadirlo como una excepcion
 		if(dep!=null)
 		{
 			Bguardar.setDisable(false);
@@ -135,9 +135,6 @@ public class ControladorEditarDeportista
 			
 			TNombre.setText(dep.getNombre());
 			
-			//buscar su disciplina y categoria
-			
-			
 		}
 		else
 		{	
@@ -160,8 +157,7 @@ public class ControladorEditarDeportista
 			
 			BotonNotificacion.setVisible(true);
 			TextNotificacion.setVisible(true);
-			notificacionVentana.setVisible(true);
-			
+			notificacionVentana.setVisible(true);	
 		}
 		
     }

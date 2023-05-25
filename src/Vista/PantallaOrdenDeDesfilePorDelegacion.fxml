@@ -31,7 +31,7 @@
          </font>
       </Text>
       <Button fx:id="BAnterior" layoutX="433.0" layoutY="94.0" mnemonicParsing="false" onAction="#DelegacionAnterior" style="-fx-background-color: white;" text="Anterior" />
-      <Button fx:id="BSiguiente" layoutX="505.0" layoutY="94.0" mnemonicParsing="false" onAction="#DlegacionSiguiente" style="-fx-background-color: white;" text="Siguiente" />
+      <Button fx:id="BSiguiente" layoutX="505.0" layoutY="94.0" mnemonicParsing="false" onAction="#DelegacionSiguiente" style="-fx-background-color: white;" text="Siguiente" />
       <ImageView fitHeight="72.0" fitWidth="100.0" layoutX="525.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Figuras/LOGOJAVERIANA.png" />

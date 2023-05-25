@@ -110,4 +110,17 @@ public class Disciplina
 		Categorias = categorias;
 	}
 	
+	public ArrayList<String> obtenerNombreCategorias()
+	{
+		ArrayList<String> NombreCategoria = new ArrayList<String>();
+		
+		for(Categoria indice2: Categorias)
+		{
+			
+			NombreCategoria.add(indice2.getNombre());
+		}
+		
+		return NombreCategoria;
+	}
+	
 }
