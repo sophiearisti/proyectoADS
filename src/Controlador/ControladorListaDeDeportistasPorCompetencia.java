@@ -52,23 +52,22 @@ public class ControladorListaDeDeportistasPorCompetencia implements Initializabl
 	    	ColumnFacultad.setCellValueFactory(new PropertyValueFactory<Deportista, String>("DelegacionPertenece"));
 	    	ColumnNoInscripcion.setCellValueFactory(new PropertyValueFactory<Deportista, Integer>("NoInscripcion") );
 	    	ComboBox.getItems().addAll(Olimpiada.getDisciplinasCategorias());
-	    	//ComboBox.setOnAction(this::getNombreDisciplina);
 	    }
 	    
 	    
 	   public void agregarDeportistas(ActionEvent event) 
-	   {	this.listaDeportistas.clear();
+	   {
+		   
+		   this.listaDeportistas.clear();
 		   
 		   ArrayList<Deportista> ListAuxiliar = new ArrayList<Deportista>();
 		   
 		   ListAuxiliar = Olimpiada.LlenarTabla(ComboBox.getValue());
 		   
-		   for (Deportista indice : ListAuxiliar) {
-			   
-			  // if(this.listaDeportistas.contains(indice)) {
+		   for (Deportista indice : ListAuxiliar) 
+		   {
 				   this.listaDeportistas.add(indice);
 				   this.TablaDeportistas.setItems(listaDeportistas);
-			  // }
 		   }
 	   }
 	   

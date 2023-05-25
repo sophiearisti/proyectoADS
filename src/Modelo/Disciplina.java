@@ -89,20 +89,25 @@ public class Disciplina
 		return insertado;
 	}
 	
-	public ArrayList<Deportista> ObtenerDeportistaCategoria() {
-		ArrayList<ArrayList<Deportista>> matriz = new ArrayList<>();
+	public ArrayList<Deportista> ObtenerDeportistaCategoria(String NombreCategoria) {
 		ArrayList<Deportista> ListDeportista = new ArrayList<>();
-		for(Categoria indice : Categorias ) {
+		
+		for(Categoria indice : Categorias) {
 			
-			matriz.add(indice.ObtenerDeportistas());
-		}
-		for(ArrayList<Deportista> indice : matriz) {
-			for(Deportista elemento : indice) {
-				ListDeportista.add(elemento);
+			if(indice.getNombre().equals(NombreCategoria)) {
+				ListDeportista= indice.ObtenerDeportistas();
 			}
-			
 		}
+	
 		return ListDeportista;
+	}
+
+	public ArrayList<Categoria> getCategorias() {
+		return Categorias;
+	}
+
+	public void setCategorias(ArrayList<Categoria> categorias) {
+		Categorias = categorias;
 	}
 	
 }
