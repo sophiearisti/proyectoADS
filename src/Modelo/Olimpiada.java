@@ -39,6 +39,20 @@ public class Olimpiada
 				
 	
 	}
+
+	public static ArrayList<Deportista> LlenarTabla(String NombreCategoria){
+		ArrayList<Deportista> ListDisciplina = new ArrayList<Deportista>();
+		for(Disciplina indice : disciplinasList.getDisciplinasList()) 
+		{
+			if(NombreCategoria.equals(indice.getDisciplina())) {
+				
+				ListDisciplina=(indice.ObtenerDeportistaCategoria());
+			}
+			
+			
+		}
+		return ListDisciplina;
+	}
 	
 	public static void setDisciplinas(ArrayList<Disciplina> disciplinas) {
 		disciplinasList.setDisciplinasList(disciplinas);

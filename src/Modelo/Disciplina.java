@@ -89,4 +89,20 @@ public class Disciplina
 		return insertado;
 	}
 	
+	public ArrayList<Deportista> ObtenerDeportistaCategoria() {
+		ArrayList<ArrayList<Deportista>> matriz = new ArrayList<>();
+		ArrayList<Deportista> ListDeportista = new ArrayList<>();
+		for(Categoria indice : Categorias ) {
+			
+			matriz.add(indice.ObtenerDeportistas());
+		}
+		for(ArrayList<Deportista> indice : matriz) {
+			for(Deportista elemento : indice) {
+				ListDeportista.add(elemento);
+			}
+			
+		}
+		return ListDeportista;
+	}
+	
 }
