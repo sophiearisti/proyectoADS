@@ -123,8 +123,21 @@ public class Olimpiada
 	public static void AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
 			boolean abanderado, Float estatura, Integer id, String nombre) 
 	{
-		// TODO Auto-generated method stub
+		anadir_deportista_delegacion(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre);
+		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
+		ListaDeportistas.getDeportistasList().add(elDeportista);
 		
+	}
+	
+	public static void anadir_deportista_delegacion(String disciplina, String categoria, String delegacion, boolean primeraVez,
+			boolean abanderado, Float estatura, Integer id, String nombre) {
+		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
+		
+		for(Delegacion delegacion1: ListaDelegaciones.getDelegacionesList()) {
+			if(delegacion1.getFacultad().equals(delegacion)) {
+				delegacion1.AgregarDeportista(elDeportista);
+			}
+		}
 	}
 	
 	
