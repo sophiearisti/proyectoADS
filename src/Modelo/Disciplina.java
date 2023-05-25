@@ -27,6 +27,9 @@ public class Disciplina
 		Disciplina = disciplina;
 	}
 	
+	public ArrayList <Categoria> getCategorias() {
+		return Categorias;
+	}
 
 	public Disciplina(ArrayList<Categoria> categorias, String disciplina) {
 		super();
@@ -87,27 +90,6 @@ public class Disciplina
 		}
 		
 		return insertado;
-	}
-	
-	public ArrayList<Deportista> ObtenerDeportistaCategoria(String NombreCategoria) {
-		ArrayList<Deportista> ListDeportista = new ArrayList<>();
-		
-		for(Categoria indice : Categorias) {
-			
-			if(indice.getNombre().equals(NombreCategoria)) {
-				ListDeportista= indice.ObtenerDeportistas();
-			}
-		}
-	
-		return ListDeportista;
-	}
-
-	public ArrayList<Categoria> getCategorias() {
-		return Categorias;
-	}
-
-	public void setCategorias(ArrayList<Categoria> categorias) {
-		Categorias = categorias;
 	}
 	
 }
