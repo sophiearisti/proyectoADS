@@ -168,6 +168,17 @@ public class Olimpiada
 	}
 	
 	
+	public static Integer obtener_indice_deportista(Integer codigo) {
+		Integer indice = ListaDeportistas.buscar_indice_deportista(codigo);
+		return indice;
+		
+	}
+	
+	public static void eliminar_deportista(Integer indice) {
+		ListaDeportistas.getDeportistasList().remove(indice);
+	}
+	
+	
 	
 	public static Boolean AnadirCategoria()
 	{
@@ -186,6 +197,12 @@ public class Olimpiada
 	public static ArrayList<Categoria> ObtenerCategoriasDeDisciplina(String nombreDisciplina)
 	{
 		ArrayList<Categoria> k=new ArrayList<Categoria>();
+	
+		for(Disciplina disciplina: disciplinasList.getDisciplinasList()) {
+			if(disciplina.getDisciplina().equals(nombreDisciplina)) {
+				k = disciplina.getCategorias();
+			}
+		}
 		return k;
 	}
 	
