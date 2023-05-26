@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /*import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -52,10 +53,25 @@ public class Deportistas
 		DeportistasList = deportistasList;
 	}
 	
-	public void AnadirDelegacion(Deportista deportistaNuevo)
+	public Boolean AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
+			boolean abanderado, Float estatura, Integer id, String nombre)
 	{
-		this.DeportistasList.add(deportistaNuevo);
+		if(BuscarDeportista(id)!=null)
+		{
+			return false;
+		}
+		
+		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
+		
+		this.DeportistasList.add(elDeportista);
+		
+		for(Deportista dep:DeportistasList)
+		{
+			System.out.println(dep.getNoInscripcion());
+		}
+		return true;
 	}
+	
 	
 	public void EditarDeportista(Integer id, String nombre, Boolean asistenciaPrimeraVez, Float estatura,
 			Boolean abanderado,String delegacionPertenece, String categoriaPertenece,String disciplinaPertenece)
@@ -90,17 +106,24 @@ public class Deportistas
 		return encontrado;
 	}
 	
-	public Boolean deportista_registrado(Integer NoInscripcion, String Nombre) {
+	
+	public Boolean eliminar_deportista(Integer numeroInscripcion) {
 		
-		getDeportistasList();
-		boolean registrado = false;
-		for(Deportista dep: DeportistasList) {
-			if((dep.getNoInscripcion()==NoInscripcion)&&(dep.getNombre().equals(Nombre))) {
-				registrado = true;
-			}
-		}
 		
-		return registrado;
+	    Iterator<Deportista> iterador = DeportistasList.iterator();
+	    
+	    while (iterador.hasNext()) {
+	        Deportista deportista = iterador.next();
+	        if (deportista.getNoInscripcion() == numeroInscripcion) {
+	            iterador.remove();
+	            System.out.println("Deportista eliminado: " + deportista.getNombre());
+	// Termina el método después de eliminar el deportista
+	            return true;
+	        }
+	    }
+	    
+	    	
+	    return false; 
 	}
 	
 }

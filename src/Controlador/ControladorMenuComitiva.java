@@ -1,6 +1,5 @@
 package Controlador;
 
-import java.awt.Rectangle;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -9,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -58,23 +58,18 @@ public class ControladorMenuComitiva  {
     @FXML
     private Button VentanaNotificacion;
     
+    private Alert alert = new Alert(Alert.AlertType.ERROR);
+    
 
-    @FXML
-    void AceptarNotificacion(ActionEvent event) 
-    {
-    	ERRORNotificacion.setVisible(false);
-    	ExplicacionNotificacion.setVisible(false);
-    	BAceptarNotificacion.setVisible(false);
-    	VentanaNotificacion.setVisible(false);
-    }
-
+    
     @FXML
     void FuncionalidadNoImplementada(ActionEvent event) 
     {
-    	ERRORNotificacion.setVisible(true);
-    	ExplicacionNotificacion.setVisible(true);
-    	VentanaNotificacion.setVisible(true);
-    	BAceptarNotificacion.setVisible(true);
+    	System.err.println("La funcionalidad a la que esta queriendo ingresar todavia no ha sido implementada");
+        alert.setTitle("NO IMPLEMENTADA");
+        alert.setHeaderText("Funcionalidad no implementada");
+        alert.setContentText("La funcionalidad a la que esta queriendo ingresar todavia no ha sido implementada");
+        alert.show();
     }
 
     @FXML
@@ -112,16 +107,16 @@ public class ControladorMenuComitiva  {
     @FXML
     void PantallaEliminarDeportista(ActionEvent event) throws IOException 
     {
-    	/*Stage stage;
+    	Stage stage;
    	 	Scene scene;
    	 	Parent root;
    	 
    	 
-   	 	root = FXMLLoader.load(getClass().getResource("/Vista/MenuComitiva.fxml"));
+   	 	root = FXMLLoader.load(getClass().getResource("/Vista/PantallaBorrarDeportista.fxml"));
 	    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
-		stage.show();*/
+		stage.show();
     	
     }
 

@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /*import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -148,5 +149,35 @@ public class Categoria {
 		
 		
 	}
+	
+	public Boolean AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
+			boolean abanderado, Float estatura, Integer id, String nombre)
+	{
+		
+		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
+		
+		Deportistas.add(elDeportista);
+		
+		return true;
+	}
+	
+	public Boolean eliminar_deportista(Integer numeroInscripcion) 
+	   {
+			
+			
+		    Iterator<Deportista> iterador = Deportistas.iterator();
+		    
+		    while (iterador.hasNext()) {
+		        Deportista deportista = iterador.next();
+		        if (deportista.getNoInscripcion() == numeroInscripcion) {
+		            iterador.remove();
+		            System.out.println("Deportista eliminado: " + deportista.getNombre());
+		            return true; // Termina el método después de eliminar el deportista
+		        }
+		    }
+		    
+		    	
+		    return false; 
+		}
 
 }

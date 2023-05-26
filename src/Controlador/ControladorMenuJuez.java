@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -37,23 +38,16 @@ public class ControladorMenuJuez  {
     @FXML
     private Button VentanaNotificacion;
 
-
-    @FXML
-    void AceptarNotificacion(ActionEvent event) 
-    {
-    	ERRORNotificacion.setVisible(false);
-    	ExplicacionNotificacion.setVisible(false);
-    	BAceptarNotificacion.setVisible(false);
-    	VentanaNotificacion.setVisible(false);
-    }
+    private Alert alert = new Alert(Alert.AlertType.ERROR);
 
     @FXML
     void FuncionalidadNoImplementada(ActionEvent event) 
     {
-    	ERRORNotificacion.setVisible(true);
-    	ExplicacionNotificacion.setVisible(true);
-    	VentanaNotificacion.setVisible(true);
-    	BAceptarNotificacion.setVisible(true);
+    	System.out.println("El deportista ingresado ya existe");
+        alert.setTitle("NO IMPLEMENTADA");
+        alert.setHeaderText("Funcionalidad no implementada");
+        alert.setContentText("La funcionalidad a la que esta queriendo ingresar todavia no ha sido implementada");
+        alert.show();
     }
 
     @FXML

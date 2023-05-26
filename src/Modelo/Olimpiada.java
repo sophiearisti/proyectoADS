@@ -50,7 +50,7 @@ public class Olimpiada
 	
 /////////////////////////////////CASO DE USO DE LISTA DE DEPORTISTAS POR COMPETENCIA//////////////////////////////////
 	
-	public static ArrayList<String> getDisciplinasCategorias() 
+	public static ArrayList<String> getTODASLasCatgorias() 
 	{
 		
 		ArrayList<String> NombreCategoria = new ArrayList<String>();
@@ -109,50 +109,43 @@ public class Olimpiada
 	
 //////////////////////////////////CASO DE USO INSCRIPBIR DEPORTISTA////////////////////////////////////////	
 	
-	public static void AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
+	public static Boolean AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
 			boolean abanderado, Float estatura, Integer id, String nombre) 
 	{
-		// TODO Auto-generated method stub
+		if(ListaDeportistas.AnadirDeportista(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre))
+		{
+			ListaDelegaciones.AnadirDeportista(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre);
+			disciplinasList.AnadirDeportista(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre);
+			return true;
+		}
 		
+		return false;
+	}
+	
+	public static ArrayList<String> getCategoriasSegunDisciplina(String NombreDisciplina) 
+	{
+		
+		return disciplinasList.getCategoriasNombres(NombreDisciplina);
+	
 	}
 	
 ///////////////////////////////////////CASO DE USO ELIMINAR DEPORTISTA////////////////////////////////////////	
-	public static Boolean EliminarDeportista()
-	{
-		return true;
-	}	
+	
+	public static Boolean eliminar_deportista(Integer indice, String categoria, String delegacion, String disciplina) {
+		
+		if(ListaDeportistas.eliminar_deportista(indice))
+		{
+			disciplinasList.eliminar_deportista(indice, disciplina, categoria);
+		    ListaDelegaciones.eliminar_deportista(indice, delegacion);
+			return true;
+		}
+		
+		return false;
 
+	}
 
 ///////////////////////////////////////PARA PERSISTENCIA///////////////////////////////////////////////////////
-	public static Boolean BuscarDeportistaDeCategoria()
-	{
-		return true;
-	}
-	
-	public static ArrayList<Deportista> ObtenerDeportistasDeDelegacion()
-	{
-		ArrayList<Deportista> k=new ArrayList<Deportista>();
-		return k;
-	}
-	
-	public static ArrayList<Deportista> ObtenerDeportistasDeCategoria()
-	{
-		ArrayList<Deportista> k=new ArrayList<Deportista>();
-		return k;
-	}
-	
-	public static ArrayList<Categoria> ObtenerCategoriasDeDisciplina(String nombreDisciplina)
-	{
-		ArrayList<Categoria> k=new ArrayList<Categoria>();
-		return k;
-	}
-	public static ArrayList<Disciplina> ObtenerDisciplinas()
-	{
-		ArrayList<Disciplina> k=new ArrayList<Disciplina>();
-		return k;
-	}
-	
-	
+
 	public static Boolean AnadirDisciplina()
 	{
 		if(BuscarDisciplina())

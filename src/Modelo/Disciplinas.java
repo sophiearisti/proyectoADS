@@ -140,4 +140,51 @@ public class Disciplinas
 			}
 		}
 	}
+	
+	public ArrayList<String> getCategoriasNombres(String NombreDisciplina) 
+	{
+		ArrayList<String> CategoriasDeDisciplina=new ArrayList<String>();
+	
+		for(Disciplina disp: this.DisciplinasList) 
+		{
+			
+			if(disp.getDisciplina().equals(NombreDisciplina)) 
+			{
+				CategoriasDeDisciplina=disp.obtenerNombreCategorias();
+			}
+			
+		}
+		return CategoriasDeDisciplina;
+	}
+	
+	public void AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
+			boolean abanderado, Float estatura, Integer id, String nombre)
+	{
+		
+		for(Disciplina disp: DisciplinasList)
+		{
+			if(disciplina.equals(disp.getDisciplina()))
+			{
+				disp.AnadirDeportista(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre);
+
+			}
+			
+		}
+	
+	}
+	
+	public Boolean eliminar_deportista(Integer numeroInscripcion,String disciplina,String categoria) {
+	    
+		for(Disciplina disp: DisciplinasList)
+		{
+			if(disciplina.equals(disp.getDisciplina()))
+			{
+				disp.eliminar_deportista(numeroInscripcion,categoria);
+				return true;
+			}
+			
+		}
+	    	
+	    return false; 
+	}
 }

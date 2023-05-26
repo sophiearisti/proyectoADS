@@ -5,12 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="655.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorEditarDeportista">
    <children>
@@ -19,8 +19,11 @@
          <font>
             <Font size="14.0" />
          </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Asistencia" />
+         </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="RBNoAsistencia" disable="true" layoutX="214.0" layoutY="273.0" mnemonicParsing="false" text="No">
+      <RadioButton fx:id="RBNoAsistencia" disable="true" layoutX="214.0" layoutY="273.0" mnemonicParsing="false" text="No" toggleGroup="$Asistencia">
          <font>
             <Font size="14.0" />
          </font>
@@ -29,8 +32,11 @@
          <font>
             <Font size="14.0" />
          </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Abanderado" />
+         </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="RBNoAbanderado" disable="true" layoutX="455.0" layoutY="272.0" mnemonicParsing="false" text="No">
+      <RadioButton fx:id="RBNoAbanderado" disable="true" layoutX="455.0" layoutY="272.0" mnemonicParsing="false" text="No" toggleGroup="$Abanderado">
          <font>
             <Font size="14.0" />
          </font>
@@ -86,12 +92,5 @@
             <Image url="@Figuras/LOGOJAVERIANA.png" />
          </image>
       </ImageView>
-      <Button fx:id="notificacionVentana" layoutX="199.0" layoutY="138.0" mnemonicParsing="false" prefHeight="203.0" prefWidth="298.0" style="-fx-background-color: #E3DE8F;" visible="false" />
-      <Button fx:id="BotonNotificacion" layoutX="321.0" layoutY="299.0" mnemonicParsing="false" onAction="#AceptarNotificacion" style="-fx-background-color: #D4B483;" text="Aceptar" visible="false" />
-      <Text fx:id="TextNotificacion" layoutX="252.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El codigo de ese deportista no existe" visible="false" wrappingWidth="210.662109375">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>

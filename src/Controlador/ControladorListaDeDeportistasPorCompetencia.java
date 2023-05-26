@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 
 import Modelo.Deportista;
 import Modelo.Olimpiada;
+import Modelo.Excepciones.SinInformacion;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
@@ -45,13 +47,32 @@ public class ControladorListaDeDeportistasPorCompetencia implements Initializabl
 	    
 	    private ObservableList<Deportista> listaDeportistas; 
 	    
+	    private Alert alert = new Alert(Alert.AlertType.ERROR);
+	    
 	    
 	    public void initialize ( URL arg0, ResourceBundle arg1) {
 	    	listaDeportistas = FXCollections.observableArrayList();
 	    	ColumnNombre.setCellValueFactory(new PropertyValueFactory<Deportista, String>("Nombre"));
 	    	ColumnFacultad.setCellValueFactory(new PropertyValueFactory<Deportista, String>("DelegacionPertenece"));
 	    	ColumnNoInscripcion.setCellValueFactory(new PropertyValueFactory<Deportista, Integer>("NoInscripcion") );
-	    	ComboBox.getItems().addAll(Olimpiada.getDisciplinasCategorias());
+	    	
+	    	try
+	    	{
+	    		if( Olimpiada.getTODASLasCatgorias().size()==0)
+	    		{
+	    		  throw new SinInformacion("No existen categorias en el sistema");
+	    		}
+	    	}
+	    	catch(SinInformacion resp)
+	    	{
+	    		System.err.println(resp.getResp());
+				 alert.setTitle("VACIO");
+		         alert.setHeaderText("ALERTA");
+		         alert.setContentText("No existen categorias en el sistema");
+		         alert.show();
+	    	}
+	    	
+	    	ComboBox.getItems().addAll(Olimpiada.getTODASLasCatgorias());
 	    }
 	    
 	    

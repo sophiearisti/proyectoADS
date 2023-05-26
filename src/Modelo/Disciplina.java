@@ -123,4 +123,34 @@ public class Disciplina
 		return NombreCategoria;
 	}
 	
+	public void AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
+			boolean abanderado, Float estatura, Integer id, String nombre)
+	{
+		
+		for(Categoria cat: Categorias)
+		{
+			if(categoria.equals(cat.getNombre()))
+			{
+				cat.AnadirDeportista(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre);
+
+			}
+			
+		}
+	
+	}
+	
+	public Boolean eliminar_deportista(Integer numeroInscripcion,String categoria) {
+	    
+		for(Categoria cat: Categorias)
+		{
+			if(categoria.equals(cat.getNombre()))
+			{
+				return cat.eliminar_deportista(numeroInscripcion);
+
+			}
+			
+		}
+	    	
+	    return false; 
+	}
 }

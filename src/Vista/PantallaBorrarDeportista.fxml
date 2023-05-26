@@ -5,25 +5,21 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="655.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorEditarDeportista">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="655.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorBorrarDeportista">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#065180" height="71.0" layoutX="-7.0" stroke="TRANSPARENT" strokeType="INSIDE" width="665.0" />
       <RadioButton fx:id="RBSiAsistencia" disable="true" layoutX="148.0" layoutY="272.0" mnemonicParsing="false" text="Sí">
          <font>
             <Font size="14.0" />
          </font>
-         <toggleGroup>
-            <ToggleGroup fx:id="Asistencia" />
-         </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="RBNoAsistencia" disable="true" layoutX="214.0" layoutY="273.0" mnemonicParsing="false" text="No" toggleGroup="$Asistencia">
+      <RadioButton fx:id="RBNoAsistencia" disable="true" layoutX="214.0" layoutY="273.0" mnemonicParsing="false" text="No">
          <font>
             <Font size="14.0" />
          </font>
@@ -32,16 +28,13 @@
          <font>
             <Font size="14.0" />
          </font>
-         <toggleGroup>
-            <ToggleGroup fx:id="Abanderado" />
-         </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="RBNoAbanderado" disable="true" layoutX="455.0" layoutY="272.0" mnemonicParsing="false" text="No" toggleGroup="$Abanderado">
+      <RadioButton fx:id="RBNoAbanderado" disable="true" layoutX="455.0" layoutY="272.0" mnemonicParsing="false" text="No">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <Button fx:id="Bguardar" disable="true" layoutX="276.0" layoutY="375.0" mnemonicParsing="false" onAction="#EditarDeportista" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Guardar">
+      <Button fx:id="Bguardar" disable="true" layoutX="276.0" layoutY="375.0" mnemonicParsing="false" onAction="#BorrarrDeportista" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Borrar">
          <font>
             <Font size="16.0" />
          </font>

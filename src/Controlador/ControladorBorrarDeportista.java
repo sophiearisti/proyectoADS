@@ -1,10 +1,9 @@
- package Controlador;
+package Controlador;
 
 import java.io.IOException;
 
-import Modelo.Categoria;
+
 import Modelo.Deportista;
-import Modelo.Disciplina;
 import Modelo.Olimpiada;
 import Modelo.Excepciones.CamposVacios;
 import javafx.event.ActionEvent;
@@ -22,9 +21,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class ControladorEditarDeportista 
-{
-	
+public class ControladorBorrarDeportista {
+
     @FXML
     private ComboBox<String> CBCategoria;
 
@@ -94,11 +92,10 @@ public class ControladorEditarDeportista
 				throw new CamposVacios("No puso nada en el cuadro de texto");
 			}
 			
-          Deportista dep=Olimpiada.BuscarDeportista(Integer.parseInt(TextBuscador.getText()));
-			
+			Deportista dep=Olimpiada.BuscarDeportista(Integer.parseInt(TextBuscador.getText()));
+			//anadir info del deportista
 			try
 			{
-				//anadir info del deportista
 				CBDelegacion.setPromptText(dep.getDelegacionPertenece());
 				CBDisciplina.setPromptText(dep.getDisciplinaPertenece());
 				CBCategoria.setPromptText(dep.getCategoriaPertenece());
@@ -132,13 +129,7 @@ public class ControladorEditarDeportista
 				TNombre.setText(dep.getNombre());
 				
 				Bguardar.setDisable(false);
-				RBNoAsistencia.setDisable(false);
-				RBSiAsistencia.setDisable(false);
-				RBNoAbanderado.setDisable(false);
-				RBSiAbanderado.setDisable(false);
-				TEstatura.setDisable(false);
-				TNombre.setDisable(false);
-			}
+			} 
 			catch (NullPointerException e) 
 			{
 			    System.err.println("Se produjo un NullPointerException: " + e.getMessage());
@@ -148,6 +139,7 @@ public class ControladorEditarDeportista
 		         alert.show();
 			    // Otra lógica de manejo de la excepción, como registrar el error o tomar alguna acción específica.
 			}
+			//buscar su disciplina y catego
 		}
 		catch(CamposVacios resp)
 		{
@@ -158,52 +150,22 @@ public class ControladorEditarDeportista
 	         alert.show();
 		}
 		
+			
+		
+		
     }
 	
 	
 	@FXML
-    void EditarDeportista(ActionEvent event) 
+    void BorrarrDeportista(ActionEvent event) 
 	{
-		Boolean EsAbanderado=false,EsPrimerVez=false;
 		
-		try 
-		{
-			if(TNombre.getText().length()==0 || TEstatura.getText().length()==0)
-			{
-				throw new CamposVacios("Existen campos vacios");
-			}
-			
-				if(RBSiAbanderado.isSelected()==true)
-				{
-					EsAbanderado=true;
-				}
-				
-				if(RBSiAsistencia.isSelected()==true)
-				{
-					EsPrimerVez=true;
-				}
-				
-				Olimpiada.EditarDeportista(Integer.parseInt(TextBuscador.getText()),TNombre.getText(),EsPrimerVez,Float.parseFloat(TEstatura.getText()),EsAbanderado,CBDelegacion.getPromptText(),CBCategoria.getPromptText(),CBDisciplina.getPromptText());
-				
-				Exito.setTitle("EXITO");
-		    	Exito.setHeaderText("Deportista Editado");
-		    	Exito.setContentText("El deportista con el nombre "+TNombre.getText()+" fue editado exitosamente al sistema");
-		    	Exito.show();
-				
-			
-		}
-		catch(CamposVacios resp)
-		{
-			 System.err.println(resp.getResp());
-			 alert.setTitle("VACIO");
-	         alert.setHeaderText("ALERTA");
-	         alert.setContentText("Existen campos vacios");
-	         alert.show();
-		}
+		    Olimpiada.eliminar_deportista(Integer.parseInt(TextBuscador.getText()),CBCategoria.getValue(),CBDelegacion.getValue(),CBDisciplina.getValue());
 		
-		
+			Exito.setTitle("EXITO");
+	    	Exito.setHeaderText("Deportista Borrado");
+	    	Exito.setContentText("El deportista con el nombre "+TNombre.getText()+" fue borrado exitosamente del sistema");
+	    	Exito.show();
 		
 	}
-	
-	
 }

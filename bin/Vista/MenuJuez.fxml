@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorMenuJuez">
    <content>
@@ -45,17 +44,6 @@
             <Button fx:id="BAsignarMedalla" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#FuncionalidadNoImplementada" prefHeight="85.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
             <Button fx:id="BDeportistasXCompetencia" layoutX="311.0" layoutY="106.0" mnemonicParsing="false" onAction="#PantallaListarDeportistas" prefHeight="85.0" prefWidth="267.0" style="-fx-background-color: transparent;" />
             <Button fx:id="VentanaNotificacion" layoutX="140.0" layoutY="100.0" mnemonicParsing="false" prefHeight="181.0" prefWidth="316.0" style="-fx-background-color: #E3DE8F;" visible="false" />
-            <Button fx:id="BAceptarNotificacion" layoutX="267.0" layoutY="243.0" mnemonicParsing="false" onAction="#AceptarNotificacion" style="-fx-background-color: #D5B942;" text="Aceptar" visible="false" />
-            <Text fx:id="ExplicacionNotificacion" layoutX="167.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La funcionalidad de este botón está siento implementada" visible="false" wrappingWidth="280.341796875">
-               <font>
-                  <Font name="Apple SD Gothic Neo Regular" size="21.0" />
-               </font>
-            </Text>
-            <Text fx:id="ERRORNotificacion" layoutX="260.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="75.341796875">
-               <font>
-                  <Font name="AppleGothic Regular" size="21.0" />
-               </font>
-            </Text>
          </children>
       </AnchorPane>
    </content>

@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /*import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -98,4 +99,34 @@ public class Delegaciones
 		}
 	}
 	
+	public void AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,
+			boolean abanderado, Float estatura, Integer id, String nombre)
+	{
+		
+		for(Delegacion del: DelegacionesList)
+		{
+			if(delegacion.equals(del.getFacultad()))
+			{
+				del.AnadirDeportista(disciplina, categoria, delegacion, primeraVez, abanderado, estatura, id, nombre);
+
+			}
+			
+		}
+	
+	}
+	
+ public Boolean eliminar_deportista(Integer numeroInscripcion,String delegacion) {
+	    
+	    for(Delegacion del: DelegacionesList)
+		{
+			if(delegacion.equals(del.getFacultad()))
+			{
+				del.eliminar_deportista(numeroInscripcion);
+
+			}
+			
+		}
+	    	
+	    return false; 
+	}
 }

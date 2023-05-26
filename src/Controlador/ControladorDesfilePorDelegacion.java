@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -29,6 +30,8 @@ import Modelo.Delegacion;
 import Modelo.Deportista;
 import Modelo.Disciplina;
 import Modelo.Olimpiada;
+import Modelo.Excepciones.CamposVacios;
+import Modelo.Excepciones.SinInformacion;
 
 public class ControladorDesfilePorDelegacion implements Initializable
 {
@@ -64,6 +67,8 @@ public class ControladorDesfilePorDelegacion implements Initializable
     @FXML
     private TableView<FilaTablaDesfile> TablaDeportistas;
     private ObservableList<FilaTablaDesfile> listaDeportistas=FXCollections.observableArrayList();
+    
+    private Alert alert = new Alert(Alert.AlertType.ERROR);
 
    
     
@@ -117,6 +122,22 @@ public class ControladorDesfilePorDelegacion implements Initializable
 	{
     	
     	ArrayList<Delegacion> delegaciones=Olimpiada.getDelegaciones();
+    	
+    	try
+    	{
+    		if( delegaciones.size()==0)
+    		{
+    		  throw new SinInformacion("No hay delegaciones en el sistema");
+    		}
+    	}
+    	catch(SinInformacion resp)
+    	{
+    		System.err.println(resp.getResp());
+			 alert.setTitle("VACIO");
+	         alert.setHeaderText("ALERTA");
+	         alert.setContentText("No existen delegaciones en el sistema");
+	         alert.show();
+    	}
     	
     	Maximo=delegaciones.size()-1;
     	
@@ -213,7 +234,7 @@ public class ControladorDesfilePorDelegacion implements Initializable
     }
     
     @FXML
-    void IrAMenuComitiva(ActionEvent event) throws IOException 
+    public void IrAMenuComitiva(ActionEvent event) throws IOException 
     {
     	Stage stage;
    	 	Scene scene;
