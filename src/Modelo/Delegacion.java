@@ -3,30 +3,28 @@ package Modelo;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlRootElement;*/
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 
-//@XmlRootElement(name = "Delegacion")
-//@XmlAccessorType(XmlAccessType.FIELD)
+
 public class Delegacion 
 {
-	//@XmlAttribute(name = "Facultad")
 	private String Facultad;
 	
-	//@XmlAttribute(name = "Representante")
 	private String Representante;
 	
-	//@XmlAttribute(name = "NumeroParticipantes")
 	private Integer NumeroParticipantes;
-	
-	//@XmlAttribute(name = "Puntuacion")
+
 	private Integer Puntuacion;
 	
-	//@XmlAttribute(name = "Deportistas")
-	private ArrayList<Deportista> Deportistas;
+	Deportistas ListaDeportistas=new Deportistas();
+	
+	//private ArrayList<Deportista> Deportistas;
 	
 	//Constructores
 	public Delegacion(String facultad, String representante) {
@@ -44,13 +42,13 @@ public class Delegacion
 	
 	
 	public Delegacion(String facultad, String representante, Integer numeroParticipantes,
-			ArrayList<Deportista> deportistas) {
+			Deportistas listaDeportistas) {
 		super();
 		Facultad = facultad;
 		Representante = representante;
 		NumeroParticipantes = numeroParticipantes;
 		Puntuacion = 0;
-		Deportistas = deportistas;
+		ListaDeportistas=listaDeportistas;
 	}
 
 
@@ -87,22 +85,25 @@ public class Delegacion
 		Puntuacion = puntuacion;
 	}
 
-
-	public ArrayList<Deportista> getDeportistas() {
-		return Deportistas;
-	}
-
-
-	public void setDeportistas(ArrayList<Deportista> deportistas) {
-		Deportistas = deportistas;
+	public Deportistas getListaDeportistas() {
+		return ListaDeportistas;
 	}
 	
+	public ArrayList<Deportista> getDeportistas() {
+		return ListaDeportistas.getDeportistasList();
+	}
+	
+	//@XmlElement(name = "Deportista")
+	public void setListaDeportistas(Deportistas listaDeportistas) {
+		ListaDeportistas = listaDeportistas;
+	}
+
 	public Boolean AgregarDeportista(Deportista deportista)
 	{
 		Boolean insertado=true;
 		
 		//toca mirar si ya existe el deportista
-		for(int i=0; i<Deportistas.size(); i++)
+		for(int i=0; i<ListaDeportistas.getDeportistasList().size(); i++)
 		{
 			if(true)
 			{
@@ -112,7 +113,8 @@ public class Delegacion
 		
 		if(insertado)
 		{
-			Deportistas.add(deportista);
+			ListaDeportistas.addDeportista(deportista);
+			
 		}
 		
 		return insertado;
@@ -121,7 +123,7 @@ public class Delegacion
 	public void ActualizarDeportista(Integer id,String nombre, Boolean asistenciaPrimeraVez, Float estatura,
 			Boolean abanderado)
 	{
-		for(Deportista dep: Deportistas)
+		for(Deportista dep: ListaDeportistas.getDeportistasList())
 		{
 			if(id==dep.getNoInscripcion())
 			{
@@ -140,7 +142,9 @@ public class Delegacion
 		
 		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
 		
-		Deportistas.add(elDeportista);
+		ListaDeportistas.addDeportista(elDeportista);
+		
+		setNumeroParticipantes(getNumeroParticipantes()+1);
 		
 		return true;
 	}
@@ -149,7 +153,7 @@ public class Delegacion
    {
 		
 		
-	    Iterator<Deportista> iterador = Deportistas.iterator();
+	    Iterator<Deportista> iterador =ListaDeportistas.getDeportistasList().iterator();
 	    
 	    while (iterador.hasNext()) {
 	        Deportista deportista = iterador.next();

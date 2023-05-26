@@ -150,8 +150,6 @@ public class ControladorBorrarDeportista {
 	         alert.show();
 		}
 		
-			
-		
 		
     }
 	
@@ -160,7 +158,7 @@ public class ControladorBorrarDeportista {
     void BorrarrDeportista(ActionEvent event) 
 	{
 		
-		    Olimpiada.eliminar_deportista(Integer.parseInt(TextBuscador.getText()),CBCategoria.getValue(),CBDelegacion.getValue(),CBDisciplina.getValue());
+		    Olimpiada.eliminar_deportista(Integer.parseInt(TextBuscador.getText()),CBCategoria.getPromptText(),CBDelegacion.getPromptText(),CBDisciplina.getPromptText());
 		
 			Exito.setTitle("EXITO");
 	    	Exito.setHeaderText("Deportista Borrado");

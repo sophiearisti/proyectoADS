@@ -2,9 +2,8 @@ package Controlador;
 
 import Modelo.Deportista;
 //import jakarta.xml.bind.JAXBException;
-
-
-
+import Perisitencia.ManejadorArchivos;
+import jakarta.xml.bind.JAXBException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +16,11 @@ public class PrincipalOlimpiada extends Application {
 	public void start(Stage stage) 
 	{
 		try {
+			   ManejadorArchivos.leerEnArchivoXMLDelegaciones();
+			   ManejadorArchivos.leerEnArchivoXMLDeportitas();
+			   ManejadorArchivos.leerEnArchivoXMLDisciplinas();
+			   ManejadorArchivos.leerEnArchivoXMLJueces();
+			   
 			   Parent root = FXMLLoader.load(getClass().getResource("/Vista/MenuOlimpiadas.fxml"));
 			   Scene scene = new Scene(root);
 			   stage.setScene(scene);
@@ -26,9 +30,10 @@ public class PrincipalOlimpiada extends Application {
 		}
 	}
 	
-	public static void main(String[] args)   
+	public static void main(String[] args) throws JAXBException   
 	{
+		
 		launch(args);
-
+		
 	}
 }	

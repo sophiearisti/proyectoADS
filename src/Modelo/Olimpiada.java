@@ -2,13 +2,19 @@ package Modelo;
 
 import java.util.ArrayList;
 
+import Perisitencia.ManejadorArchivos;
+import jakarta.xml.bind.JAXBException;
+
 public class Olimpiada 
 {
+	
+	
 	private static Delegaciones ListaDelegaciones=new Delegaciones();
 	private static Deportistas ListaDeportistas=new Deportistas();
 	private static Disciplinas disciplinasList=new Disciplinas();
 	private static Jueces ListaJueces=new Jueces();
 
+	
 ///////////////////////////////////////////////////METODOS CANONICOS//////////////////////////////////////////
 	
 	public static ArrayList<Delegacion> getDelegaciones() 
@@ -39,14 +45,16 @@ public class Olimpiada
 		ListaJueces.setJueces(jueces);
 	}
 	
-	public static ArrayList<Deportista> getDeportistas() 
+	public static ArrayList<Deportista> getDeportistas()
 	{ 
 		return ListaDeportistas.getDeportistasList();
 	}
+	
 
 	public static void setDeportistas(ArrayList<Deportista> deportistas) {
 		ListaDeportistas.setDeportistasList(deportistas);
 	}
+
 	
 /////////////////////////////////CASO DE USO DE LISTA DE DEPORTISTAS POR COMPETENCIA//////////////////////////////////
 	
@@ -82,6 +90,7 @@ public class Olimpiada
 		return ListDisciplina;
 		
 	}	
+
 	
 //////////////////////////////////////////CASO DE USO EDITAR DEPORTISTA///////////////////////////////////////////
 	
@@ -105,6 +114,7 @@ public class Olimpiada
 		
 		return encontrado;
 	}
+
 	
 	
 //////////////////////////////////CASO DE USO INSCRIPBIR DEPORTISTA////////////////////////////////////////	
@@ -129,12 +139,14 @@ public class Olimpiada
 	
 	}
 	
+	
 ///////////////////////////////////////CASO DE USO ELIMINAR DEPORTISTA////////////////////////////////////////	
 	
 	public static Boolean eliminar_deportista(Integer indice, String categoria, String delegacion, String disciplina) {
 		
 		if(ListaDeportistas.eliminar_deportista(indice))
 		{
+			System.out.println("hummm "+disciplina);
 			disciplinasList.eliminar_deportista(indice, disciplina, categoria);
 		    ListaDelegaciones.eliminar_deportista(indice, delegacion);
 			return true;
@@ -146,45 +158,32 @@ public class Olimpiada
 
 ///////////////////////////////////////PARA PERSISTENCIA///////////////////////////////////////////////////////
 
-	public static Boolean AnadirDisciplina()
+	public static Boolean AnadirDisciplinas(Disciplinas Disp)
 	{
-		if(BuscarDisciplina())
-		{
-			
-		}
-		return true;
-	}
-	public static Boolean BuscarDisciplina()
-	{
-		return true;
-	}
-	
-	
-	public static Boolean AnadirCategoria()
-	{
-		if( BuscarCategoria())
-		{
-			
-		}
-		return true;
-	}
-	public static Boolean BuscarCategoria()
-	{
-		return true;
-	}
-	
-	
-	public static Boolean AnadirDelegacion()
-	{
-		if(BuscarDelegacion())
-		{
-			
-		}
+		disciplinasList=Disp;
 		
 		return true;
 	}
-	public static Boolean BuscarDelegacion()
+	
+	public static Boolean AnadirJueces(Jueces jue)
 	{
+		
+		ListaJueces=jue;
+		return true;
+	}
+	
+	public static Boolean AnadirDeportistas(Deportistas dep)
+	{
+		
+		ListaDeportistas=dep;
+		return true;
+	}
+	
+	
+	
+	public static Boolean AnadirDelegaciones(Delegaciones del)
+	{
+		ListaDelegaciones=del;
 		return true;
 	}
 	

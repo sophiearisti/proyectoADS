@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="655.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorBorrarDeportista">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#065180" height="71.0" layoutX="-7.0" stroke="TRANSPARENT" strokeType="INSIDE" width="665.0" />
+      <RadioButton fx:id="RBSiAsistencia" disable="true" layoutX="148.0" layoutY="272.0" mnemonicParsing="false" text="Sí">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="RBNoAsistencia" disable="true" layoutX="214.0" layoutY="273.0" mnemonicParsing="false" text="No">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="RBSiAbanderado" disable="true" layoutX="390.0" layoutY="273.0" mnemonicParsing="false" text="Sí">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="RBNoAbanderado" disable="true" layoutX="455.0" layoutY="272.0" mnemonicParsing="false" text="No">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="Bguardar" disable="true" layoutX="276.0" layoutY="375.0" mnemonicParsing="false" onAction="#BorrarrDeportista" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Borrar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="TNombre" disable="true" layoutX="130.0" layoutY="326.0" promptText="Nombre" />
+      <TextField fx:id="TEstatura" disable="true" layoutX="375.0" layoutY="324.0" promptText="Estatura" />
+      <Label fx:id="labelCategoria" layoutX="286.0" layoutY="151.0" prefHeight="18.0" prefWidth="74.0" text="Delegación">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDisciplina" layoutX="95.0" layoutY="151.0" prefHeight="18.0" prefWidth="59.0" text="Disciplina">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCategoria" layoutX="481.0" layoutY="152.0" prefHeight="17.0" prefWidth="97.0" text="Categoría">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="239.0" prefHeight="18.0" prefWidth="180.0" text="¿ Asistencia por primera vez? ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="380.0" layoutY="237.0" prefHeight="18.0" prefWidth="165.0" text="¿ Será el abanderado?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TextBuscador" layoutX="160.0" layoutY="91.0" prefHeight="33.0" prefWidth="197.0" promptText="Buscar por ID" />
+      <Button layoutX="403.0" layoutY="91.0" mnemonicParsing="false" onAction="#BuscarDeportista" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #D4B483;" text="Buscar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="1.0" layoutY="-4.0" mnemonicParsing="false" onAction="#VolverAMenuComitiva" prefHeight="70.0" prefWidth="75.0" style="-fx-background-color: #09456c;" text="Atrás" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="CBDisciplina" disable="true" layoutX="49.0" layoutY="181.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
+      <ComboBox fx:id="CBDelegacion" disable="true" layoutX="251.0" layoutY="181.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
+      <ComboBox fx:id="CBCategoria" disable="true" layoutX="441.0" layoutY="181.0" prefWidth="150.0" style="-fx-background-color: #E7DECD;" />
+      <ImageView fitHeight="71.0" fitWidth="84.0" layoutX="580.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Figuras/LOGOJAVERIANA.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

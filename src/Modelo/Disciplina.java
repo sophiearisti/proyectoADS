@@ -2,19 +2,16 @@ package Modelo;
 
 import java.util.ArrayList;
 
-/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlRootElement;*/
+import jakarta.xml.bind.annotation.XmlRootElement;
 
-//@XmlRootElement(name = "Disciplina")
-//@XmlAccessorType(XmlAccessType.FIELD)
 public class Disciplina 
 {
-	//@XmlAttribute(name = "Categorias")
-	private ArrayList<Categoria> Categorias;
+
+	private Categorias CategoriasList= new Categorias();;
 	
-	//@XmlAttribute(name = "Disciplina")
 	private String Disciplina;
 	
 	public Disciplina() 
@@ -28,16 +25,16 @@ public class Disciplina
 	}
 	
 
-	public Disciplina(ArrayList<Categoria> categorias, String disciplina) {
+	public Disciplina(Categorias categorias, String disciplina) {
 		super();
-		Categorias = categorias;
+		CategoriasList = categorias;
 		Disciplina = disciplina;
 	}
 
 	public void actualizarDeportista(Integer id,String nombre, Boolean asistenciaPrimeraVez, Float estatura,
 			Boolean abanderado,String categoriaPertenece)
 	{
-		for(Categoria cat: Categorias)
+		for(Categoria cat: CategoriasList.getCategoriasList())
 		{
 			if(cat.getNombre().equals(categoriaPertenece))
 			{
@@ -48,7 +45,7 @@ public class Disciplina
 	
 	public Boolean buscarCategoria(String categoria) 
 	{
-		for(Categoria cat: Categorias)
+		for(Categoria cat: CategoriasList.getCategoriasList())
 		{
 			if(cat.getNombre()==categoria)
 			{
@@ -73,7 +70,7 @@ public class Disciplina
 		Boolean insertado=true;
 		
 		//toca mirar si ya existe el deportista
-		for(int i=0; i<Categorias.size(); i++)
+		for(int i=0; i<CategoriasList.getCategoriasList().size(); i++)
 		{
 			if(true)
 			{
@@ -83,7 +80,7 @@ public class Disciplina
 		
 		if(insertado)
 		{
-			Categorias.add(nuevaCategoria);
+			CategoriasList.addCategoria(nuevaCategoria);
 		}
 		
 		return insertado;
@@ -92,7 +89,7 @@ public class Disciplina
 	public ArrayList<Deportista> ObtenerDeportistaCategoria(String NombreCategoria) {
 		ArrayList<Deportista> ListDeportista = new ArrayList<>();
 		
-		for(Categoria indice : Categorias) {
+		for(Categoria indice : CategoriasList.getCategoriasList()) {
 			
 			if(indice.getNombre().equals(NombreCategoria)) {
 				ListDeportista= indice.ObtenerDeportistas();
@@ -103,18 +100,28 @@ public class Disciplina
 	}
 
 	public ArrayList<Categoria> getCategorias() {
-		return Categorias;
+		return CategoriasList.getCategoriasList();
 	}
 
 	public void setCategorias(ArrayList<Categoria> categorias) {
-		Categorias = categorias;
+		CategoriasList.setCategoriasList(categorias);
 	}
 	
+	
+	
+	public Categorias getCategoriasList() {
+		return CategoriasList;
+	}
+
+	public void setCategoriasList(Categorias categoriasList) {
+		CategoriasList = categoriasList;
+	}
+
 	public ArrayList<String> obtenerNombreCategorias()
 	{
 		ArrayList<String> NombreCategoria = new ArrayList<String>();
 		
-		for(Categoria indice2: Categorias)
+		for(Categoria indice2: CategoriasList.getCategoriasList())
 		{
 			
 			NombreCategoria.add(indice2.getNombre());
@@ -127,7 +134,7 @@ public class Disciplina
 			boolean abanderado, Float estatura, Integer id, String nombre)
 	{
 		
-		for(Categoria cat: Categorias)
+		for(Categoria cat: CategoriasList.getCategoriasList())
 		{
 			if(categoria.equals(cat.getNombre()))
 			{
@@ -141,7 +148,7 @@ public class Disciplina
 	
 	public Boolean eliminar_deportista(Integer numeroInscripcion,String categoria) {
 	    
-		for(Categoria cat: Categorias)
+		for(Categoria cat: CategoriasList.getCategoriasList())
 		{
 			if(categoria.equals(cat.getNombre()))
 			{

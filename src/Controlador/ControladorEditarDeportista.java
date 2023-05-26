@@ -69,7 +69,7 @@ public class ControladorEditarDeportista
     
     
 	@FXML
-    void VolverAMenuComitiva(ActionEvent event) throws IOException 
+    public void VolverAMenuComitiva(ActionEvent event) throws IOException 
     {
     	Stage stage;
    	 	Scene scene;
@@ -84,7 +84,7 @@ public class ControladorEditarDeportista
     }
 	
 	@FXML
-    void BuscarDeportista(ActionEvent event) 
+    public void BuscarDeportista(ActionEvent event) 
 	{//Olimpiada.ObtenerDisciplinas()
 		
 		try 
@@ -162,7 +162,7 @@ public class ControladorEditarDeportista
 	
 	
 	@FXML
-    void EditarDeportista(ActionEvent event) 
+    public void EditarDeportista(ActionEvent event) 
 	{
 		Boolean EsAbanderado=false,EsPrimerVez=false;
 		

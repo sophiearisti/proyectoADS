@@ -41,7 +41,7 @@ public class ControladorDesfilePorDelegacion implements Initializable
 	
     private Integer Iterador=0;
      
-    private Integer Maximo;
+    private Integer Maximo=0;
 	 
     @FXML
     private Button BAnterior;
@@ -105,7 +105,6 @@ public class ControladorDesfilePorDelegacion implements Initializable
     	}
     	else
     	{
-    	
     	    String nombre=NombresOrdenados.get(this.Iterador);
     		NombreDelegacion.setText(nombre);
     		

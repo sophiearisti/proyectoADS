@@ -2,27 +2,25 @@ package Modelo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-
-/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlRootElement;*/
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
-//@XmlRootElement(name = "Categoria")
-//@XmlAccessorType(XmlAccessType.FIELD)
+
+@XmlRootElement(name = " Categoria")
 public class Categoria {
 	
-	//@XmlAttribute(name = "Nombre")
+
 	private String Nombre;
 	
-	//@XmlAttribute(name = "Individual")
 	private Boolean Individual;
 	
-	//@XmlAttribute(name = "Finalizado")
 	private Boolean Finalizado;
 	
-	//@XmlAttribute(name = "Deportistas")
-	private ArrayList<Deportista> Deportistas;
+	Deportistas ListaDeportistas=new Deportistas();
+	//private ArrayList<Deportista> Deportistas;
 	
 	//@XmlAttribute(name = "Resultados")
 	Resultado resultados;
@@ -35,19 +33,19 @@ public class Categoria {
 		
 	}
 	
-	public Categoria(String nombre,Boolean individual,Boolean finalizado,ArrayList<Deportista> deportistas) //ArrayList<Resultado> resultados)
+	public Categoria(String nombre,Boolean individual,Boolean finalizado,Deportistas deportistas) //ArrayList<Resultado> resultados)
 	{
 		
 		this.Nombre= nombre;
 		this.Individual = individual;
 		this.Finalizado = finalizado;
-		this.Deportistas = deportistas;
+		this.ListaDeportistas = deportistas;
 		//this.resultados = resultados;
 	}
 	
 	public String buscarCategoriaDeportista(Integer NoInscripcion) 
 	{
-		for(Deportista dep: Deportistas)
+		for(Deportista dep: ListaDeportistas.getDeportistasList())
 		{
 			if(dep.getNoInscripcion()==NoInscripcion)
 			{
@@ -84,17 +82,22 @@ public class Categoria {
 	}
 
 	public ArrayList<Deportista> getDeportistas() {
-		return Deportistas;
+		return ListaDeportistas.getDeportistasList();
+	}
+	
+	public Deportistas getListaDeportistas() {
+		return ListaDeportistas;
 	}
 
-	public void setDeportistas(ArrayList<Deportista> deportistas) {
-		Deportistas = deportistas;
+	public void setListaDeportistas(Deportistas listaDeportistas) {
+		ListaDeportistas = listaDeportistas;
 	}
 
 	public Resultado getResultados() {
 		return resultados;
 	}
 
+	@XmlElement(name = "Resultado")
 	public void setResultados(Resultado resultados) {
 		this.resultados = resultados;
 	}
@@ -106,18 +109,17 @@ public class Categoria {
 		Boolean insertado=false;
 		
 		//toca mirar si ya existe el deportista
-		for(int indice= 0;indice< Deportistas.size();indice++)
+		for(Deportista dep: ListaDeportistas.getDeportistasList())
 		{
-			if(deportista.equals(Deportistas.get(indice)))
+			if(deportista.getNoInscripcion().equals(dep.getNoInscripcion()))
 			{
 				insertado=true;
 			}
-			
 		}
 		
 		if(insertado == false)
 		{
-			Deportistas.add(deportista);
+			ListaDeportistas.addDeportista(deportista);
 			insertado=true;
 		}
 		
@@ -126,7 +128,7 @@ public class Categoria {
 	
 	
 	public ArrayList<Deportista> ObtenerDeportistas(){
-		return this.Deportistas;
+		return ListaDeportistas.getDeportistasList();
 		
 	}
 	
@@ -134,7 +136,7 @@ public class Categoria {
 			Boolean abanderado)
 	{
 		
-		for(Deportista dep: Deportistas)
+		for(Deportista dep: ListaDeportistas.getDeportistasList())
 		{
 			
 			if(id==dep.getNoInscripcion())
@@ -156,7 +158,7 @@ public class Categoria {
 		
 		Deportista elDeportista = new Deportista(id, nombre, primeraVez, estatura, abanderado, delegacion, categoria, disciplina);
 		
-		Deportistas.add(elDeportista);
+		ListaDeportistas.addDeportista(elDeportista);
 		
 		return true;
 	}
@@ -165,7 +167,7 @@ public class Categoria {
 	   {
 			
 			
-		    Iterator<Deportista> iterador = Deportistas.iterator();
+		    Iterator<Deportista> iterador = ListaDeportistas.getDeportistasList().iterator();
 		    
 		    while (iterador.hasNext()) {
 		        Deportista deportista = iterador.next();

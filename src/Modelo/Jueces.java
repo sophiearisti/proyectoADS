@@ -2,17 +2,15 @@ package Modelo;
 
 import java.util.ArrayList;
 
-/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;*/
+import jakarta.xml.bind.annotation.XmlRootElement;
 
-//@XmlRootElement(name = "Jueces")
-//@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "Jueces")
 
 public class Jueces 
 {
-	//@XmlElement(name = "JuecesList")
 	private ArrayList<Juez> JuecesList= new ArrayList<Juez>();
 
 	public Jueces(ArrayList<Juez> jueces) {
@@ -28,6 +26,7 @@ public class Jueces
 		return JuecesList;
 	}
 
+	@XmlElement(name = "Juez")
 	public void setJueces(ArrayList<Juez> jueces) {
 		JuecesList= jueces;
 	}

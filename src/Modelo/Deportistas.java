@@ -2,19 +2,15 @@ package Modelo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-
-/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;*/
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 
-//@XmlRootElement(name = "Deportistas")
-//@XmlAccessorType(XmlAccessType.FIELD)
-
+@XmlRootElement(name = "Deportistas")
 public class Deportistas 
 {
-	//@XmlElement(name = "DeportistasList")
 	private ArrayList<Deportista> DeportistasList=new ArrayList<Deportista>();
 
 	public Deportistas(ArrayList<Deportista> deportistasList) {
@@ -29,7 +25,7 @@ public class Deportistas
 
 	public ArrayList<Deportista> getDeportistasList() 
 	{
-		ArrayList<Deportista> Dep3=new ArrayList<> ();
+		/*ArrayList<Deportista> Dep3=new ArrayList<> ();
 		
 		DeportistasList.add(new Deportista(1,"Juan Paez",false,123f,false,"Ingenieria","100metros","atletismo"));
 		DeportistasList.add(new Deportista(2,"Laura Pinto",true,123f,false,"Ingenieria","100metros","atletismo"));
@@ -45,12 +41,18 @@ public class Deportistas
 		DeportistasList.add(new Deportista(12,"Salomon Garcia",true,123f,false,"CEA","100metros","atletismo"));
 		DeportistasList.add(new Deportista(13,"Melany PAPA",true,123f,true,"CEA","100metros","atletismo"));
 		DeportistasList.add(new Deportista(14,"Sophie fifi",true,123f,false,"CEA","100metros","atletismo"));
-		
+		*/
 		return DeportistasList;
 	}
 
+	@XmlElement(name = "Deportista")
 	public void setDeportistasList(ArrayList<Deportista> deportistasList) {
 		DeportistasList = deportistasList;
+	}
+	
+	public void addDeportista(Deportista dep)
+	{
+		DeportistasList.add(dep);
 	}
 	
 	public Boolean AnadirDeportista(String disciplina, String categoria, String delegacion, boolean primeraVez,

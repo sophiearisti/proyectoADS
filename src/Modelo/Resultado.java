@@ -1,27 +1,23 @@
 package Modelo;
 
-/*import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlRootElement;*/
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
-//@XmlRootElement(name = "Resultado")
-//@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "Resultado")
+
 public class Resultado {
 	
-	//@XmlAttribute(name = "Categoria")
 	private Categoria Categoria;
 	
-	//@XmlAttribute(name = "Juez")
 	private Juez Juez;
 	
-	//@XmlAttribute(name = "CodigoOro")
 	private Integer CodigoOro;
 	
-	//@XmlAttribute(name = "CodigoPlata")
 	private Integer CodigoPlata;
 	
-	//@XmlAttribute(name = "CodigoBronce")
 	private Integer CodigoBronce;
 	
 	public Resultado(Modelo.Categoria categoria, Modelo.Juez juez, Integer codigoOro, Integer codigoPlata,
@@ -52,6 +48,7 @@ public class Resultado {
 		return Juez;
 	}
 
+	@XmlElement(name = "Juez")
 	public void setJuez(Juez juez) {
 		Juez = juez;
 	}

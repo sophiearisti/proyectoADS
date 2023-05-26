@@ -1,1 +1,311 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Deportistas>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>1</noInscripcion>
+        <nombre>Juan Paez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>2</noInscripcion>
+        <nombre>Laura Pinto</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>true</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>3</noInscripcion>
+        <nombre>Mariana Duque</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>4</noInscripcion>
+        <nombre>Fernando Far</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>5</noInscripcion>
+        <nombre>Samuel Guitierrez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>6</noInscripcion>
+        <nombre>Santiago Castro</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>7</noInscripcion>
+        <nombre>Pablo Suarez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>true</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>8</noInscripcion>
+        <nombre>Melany Rizo</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>9</noInscripcion>
+        <nombre>Fernando Aristizabal</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>10</noInscripcion>
+        <nombre>Samuel Paez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>11</noInscripcion>
+        <nombre>Pedro Piedra</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>12</noInscripcion>
+        <nombre>Salomon Garcia</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>true</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>13</noInscripcion>
+        <nombre>Melany PAPA</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>14</noInscripcion>
+        <nombre>Sophie fifi</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>1</noInscripcion>
+        <nombre>Juan Paez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>2</noInscripcion>
+        <nombre>Laura Pinto</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>true</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>3</noInscripcion>
+        <nombre>Mariana Duque</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>4</noInscripcion>
+        <nombre>Fernando Far</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Ingenieria</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>5</noInscripcion>
+        <nombre>Samuel Guitierrez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>6</noInscripcion>
+        <nombre>Santiago Castro</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>7</noInscripcion>
+        <nombre>Pablo Suarez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>true</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>8</noInscripcion>
+        <nombre>Melany Rizo</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>9</noInscripcion>
+        <nombre>Fernando Aristizabal</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>Medicina</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>10</noInscripcion>
+        <nombre>Samuel Paez</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>false</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>11</noInscripcion>
+        <nombre>Pedro Piedra</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>12</noInscripcion>
+        <nombre>Salomon Garcia</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>true</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>13</noInscripcion>
+        <nombre>Melany PAPA</nombre>
+    </Deportista>
+    <Deportista>
+        <abanderado>false</abanderado>
+        <asistenciaPrimeraVez>true</asistenciaPrimeraVez>
+        <categoriaPertenece>100metros</categoriaPertenece>
+        <delegacionPertenece>CEA</delegacionPertenece>
+        <disciplinaPertenece>atletismo</disciplinaPertenece>
+        <estatura>123.0</estatura>
+        <medalla>ninguna</medalla>
+        <noInscripcion>14</noInscripcion>
+        <nombre>Sophie fifi</nombre>
+    </Deportista>
+</Deportistas>

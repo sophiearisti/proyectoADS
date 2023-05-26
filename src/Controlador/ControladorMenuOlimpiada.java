@@ -2,6 +2,13 @@ package Controlador;
 
 import java.io.IOException;
 
+import Modelo.Deportistas;
+import Modelo.Disciplinas;
+import Modelo.Jueces;
+import Modelo.Delegaciones;
+import Modelo.Olimpiada;
+import Perisitencia.ManejadorArchivos;
+import jakarta.xml.bind.JAXBException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+
 
 public class ControladorMenuOlimpiada {
 
@@ -40,9 +48,21 @@ public class ControladorMenuOlimpiada {
     }
 
     @FXML
-    void SalirDeAplicacion(ActionEvent event) 
+    void SalirDeAplicacion(ActionEvent event) throws JAXBException 
     {
- 
+    	Deportistas dep=new Deportistas(Olimpiada.getDeportistas());
+		ManejadorArchivos.escribirEnArchivoXMLDeportistas(dep);
+		
+		Delegaciones del=new Delegaciones(Olimpiada.getDelegaciones());
+		ManejadorArchivos.escribirEnArchivoXMLDelegaciones(del);
+		
+		Disciplinas disp=new Disciplinas(Olimpiada.getDisciplinas());
+		ManejadorArchivos.escribirEnArchivoXMLDisciplinas(disp);
+		
+		Jueces jue=new Jueces(Olimpiada.getJueces());
+		ManejadorArchivos.escribirEnArchivoXMLJueces(jue);
+		
+		
     	Platform.exit();
     }
     
