@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "Categorias")
+//@XmlRootElement(name = "Categorias")
 public class Categorias 
 {
 	private ArrayList<Categoria> CategoriasList=new ArrayList<Categoria>();
